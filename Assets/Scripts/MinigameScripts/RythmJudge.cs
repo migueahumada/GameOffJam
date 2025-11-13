@@ -29,25 +29,29 @@ public class RhythmJudge : MonoBehaviour
         if (keyboard.spaceKey.wasPressedThisFrame)
         {
             keyDownTime = (timeline.CurrentTimeSeconds * 1000f) + inputOffsetMs;
-            EvaluateTiming(keyDownTime, "KeyDown");
+            EvaluateTiming(keyDownTime, "KeyDown", "input down");
         }
 
         // Detectar liberación
         if (keyboard.spaceKey.wasReleasedThisFrame)
         {
             keyUpTime = (timeline.CurrentTimeSeconds * 1000f) + inputOffsetMs;
-            EvaluateTiming(keyUpTime, "KeyUp");
+            EvaluateTiming(keyUpTime, "KeyUp", "input up");
 
-            var nearest = GetNearestEvent(keyDownTime);
+            var nearest = GetNearestInputEvent(keyDownTime, "input down");
             if (nearest != null && keyUpTime < nearest.time_ms)
                 Debug.Log($"🔸 Soltaste antes de que terminara el evento '{nearest.eventName}'");
         }
     }
 
-    void EvaluateTiming(float inputTimeMs, string action)
+    void EvaluateTiming(float inputTimeMs, string action, string targetEventName)
     {
-        var nearest = GetNearestEvent(inputTimeMs);
-        if (nearest == null) return;
+        var nearest = GetNearestInputEvent(inputTimeMs, targetEventName);
+        if (nearest == null)
+        {
+            Debug.Log($"⚠️ No hay eventos '{targetEventName}' cercanos");
+            return;
+        }
 
         float diff = inputTimeMs - nearest.time_ms;
         string relation = diff < 0 ? "⏪ Antes" : "⏩ Después";
@@ -57,9 +61,10 @@ public class RhythmJudge : MonoBehaviour
         Debug.Log($"{action} respecto a '{nearest.eventName}': {relation} por {absDiff:F1}ms | Precisión: {precision:F1}%");
     }
 
-    TimelineEvent GetNearestEvent(float timeMs)
+    TimelineEvent GetNearestInputEvent(float timeMs, string targetEventName)
     {
         return timeline.Events
+            .Where(e => e.eventName == targetEventName)
             .OrderBy(e => Mathf.Abs(e.time_ms - timeMs))
             .FirstOrDefault();
     }
