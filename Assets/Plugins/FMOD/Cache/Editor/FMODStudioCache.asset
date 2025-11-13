@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: -1494134397
     Data4: -1245384029
   Banks:
-  - {fileID: -67007370095318134}
+  - {fileID: -1484633653731023173}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 89333
---- !u!114 &-67007370095318134
+--- !u!114 &-1484633653731023173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,13 +41,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: D:/07_FMOD/GameOffJam/Build/Desktop/Master.bank
+  Path: Assets/Audio/FMODBanks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638981101980000000
-  FileSizes:
-  - Name: Desktop
-    Value: 3238560
+  lastModified: 638984522664772039
+  FileSizes: []
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -62,17 +60,17 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 3258842365376694367}
-  - {fileID: -67007370095318134}
+  - {fileID: 8089263983132299302}
+  - {fileID: -1484633653731023173}
   EditorEvents:
   - {fileID: 1882167998700259492}
   - {fileID: -7305457230844571064}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -67007370095318134}
+  - {fileID: -1484633653731023173}
   StringsBanks:
-  - {fileID: 3258842365376694367}
-  cacheTime: 638981101980000000
+  - {fileID: 8089263983132299302}
+  cacheTime: 638984522664793036
   cacheVersion: 131633
 --- !u!114 &1264296398487932700
 MonoBehaviour:
@@ -117,7 +115,7 @@ MonoBehaviour:
     Data3: 653168807
     Data4: -2108111351
   Banks:
-  - {fileID: -67007370095318134}
+  - {fileID: -1484633653731023173}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -125,7 +123,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 96048
---- !u!114 &3258842365376694367
+--- !u!114 &8089263983132299302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,12 +135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: D:/07_FMOD/GameOffJam/Build/Desktop/Master.strings.bank
+  Path: Assets/Audio/FMODBanks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638981101980000000
+  lastModified: 638984522664793036
   FileSizes:
-  - Name: Desktop
+  - Name: 
     Value: 914
   Exists: 1
 --- !u!114 &9021000521002780880
