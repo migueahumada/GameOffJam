@@ -6,4 +6,6 @@ public interface IInterectable
    
     void Interect();
     void ShowInterectionText();
+    
+    void HideInterectionText();
 }

@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] private float rotationSpeed = 360;
-
+    [SerializeField] Animator _animator;
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -39,11 +39,17 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
-
     void Move()
     {
         _rb.MovePosition(transform.position + transform.forward * (_input.magnitude * speed * Time.deltaTime));
+        if (_input.magnitude > 0)
+        {
+            _animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            _animator.SetBool("isWalking", false);
+        }
     }
 
     void GetInput()
