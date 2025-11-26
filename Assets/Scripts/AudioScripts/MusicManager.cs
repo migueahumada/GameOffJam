@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using FMODUnityResonance;
 
 public class AudioManager : MonoBehaviour
 {
+    // --- Variables de Control ---
+    private float PauseVal = 0.0f; // 0.0f = Reproduciendo, 1.0f = Pausado
+    private float PAUSE_TIME = 0.7f; // Duración de la transición (fade)
+    private Coroutine currentTransition; // Referencia para evitar conflictos de corrutinas
     public static AudioManager instance;
+    private FMOD.Studio.EventInstance currentMusicInstance;
 
-    // --- Música por Escena ---
-
+    // --- Estructura de Música por Escena ---
     [System.Serializable]
     public class SceneMusicPair
     {
@@ -22,7 +27,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     public List<SceneMusicPair> sceneMusicMap = new List<SceneMusicPair>();
     
-    private FMOD.Studio.EventInstance currentMusicInstance;
+    // =======================================================
+    // CICLO DE VIDA
+    // =======================================================
 
     private void Awake()
     {
@@ -40,42 +47,41 @@ public class AudioManager : MonoBehaviour
 
     private void OnEnable()
     {
-        // Suscribirse al evento de cambio de escena
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDisable()
     {
-        // Cancelar suscripción al evento de cambio de escena
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        // Detener la música al desactivarse el objeto
         if (currentMusicInstance.isValid())
         {
-            currentMusicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            currentMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             currentMusicInstance.release();
         }
     }
 
-    // Método llamado cuando se carga una nueva escena
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         PlayMusicForScene(scene.name);
     }
+    
+    // =======================================================
+    // MÚSICA DE ESCENA
+    // =======================================================
 
     /// <summary>
-    /// Detiene la música actual y reproduce la canción asignada a la nueva escena.
+    /// Detiene la música actual, resetea el estado de pausa e inicia la nueva canción.
     /// </summary>
-    /// <param name="sceneName">El nombre de la escena cargada.</param>
     public void PlayMusicForScene(string sceneName)
     {
-        // 1. Detener y liberar la música actual si está reproduciéndose
+        // Detener la música anterior
         if (currentMusicInstance.isValid())
         {
             currentMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             currentMusicInstance.release();
         }
 
-        // 2. Buscar el evento de música para la escena
+        // Buscar el evento de música
         EventReference newMusicEvent = default;
         bool foundMusic = false;
 
@@ -89,10 +95,13 @@ public class AudioManager : MonoBehaviour
             }
         }
 
-        // 3. Reproducir la nueva música si se encuentra
+        // Reproducir la nueva música y asegurar el estado inicial
         if (foundMusic && !newMusicEvent.IsNull)
         {
             currentMusicInstance = RuntimeManager.CreateInstance(newMusicEvent);
+            // Aseguramos que la música empiece en estado "no pausado"
+            PauseVal = 0f; 
+            currentMusicInstance.setParameterByName("Paused", PauseVal);
             currentMusicInstance.start();
             Debug.Log($"🎶 Reproduciendo música para la escena: **{sceneName}**");
         }
@@ -100,5 +109,83 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log($"🛑 No se encontró música o el evento es nulo para la escena: **{sceneName}**. La música se detuvo.");
         }
+    }
+
+    // =======================================================
+    // CONTROL DE PAUSA FLUIDA
+    // =======================================================
+
+    /// <summary>
+    /// Inicia la transición fluida del parámetro "Paused" a 1 (Pausado).
+    /// </summary>
+    public void PauseMusicTransition()
+    {
+        // 1f = destino (Pausado). PAUSE_TIME = duración.
+        StartTransition(1f, PAUSE_TIME);
+        Debug.Log("Iniciando transición a estado de pausa.");
+    }
+
+    /// <summary>
+    /// Inicia la transición fluida del parámetro "Paused" a 0 (No Pausado).
+    /// </summary>
+    public void UnpauseMusicTransition()
+    {
+        // 0f = destino (Reproduciendo). PAUSE_TIME = duración.
+        StartTransition(0f, PAUSE_TIME);
+        Debug.Log("Iniciando transición a estado de reproducción.");
+    }
+
+    /// <summary>
+    /// Método de utilidad para detener la transición anterior e iniciar una nueva.
+    /// </summary>
+    /// <param name="targetValue">El valor final (0f o 1f).</param>
+    /// <param name="duration">Duración de la transición.</param>
+    private void StartTransition(float targetValue, float duration)
+    {
+        // 1. Detener la corrutina anterior para evitar conflictos.
+        if (currentTransition != null)
+        {
+            StopCoroutine(currentTransition);
+        }
+
+        // 2. Iniciar la nueva transición, usando el valor actual de PauseVal como inicio.
+        currentTransition = StartCoroutine(
+            ChangeSmoothParameter(PauseVal, targetValue, duration)
+        );
+    }
+
+    /// <summary>
+    /// Corrutina para interpolar el valor del parámetro y aplicarlo a la instancia de música,
+    /// utilizando tiempo no escalado para que funcione en pausa (Time.timeScale = 0).
+    /// </summary>
+    IEnumerator ChangeSmoothParameter( float v_start, float v_end, float duration )
+    {
+        float elapsed = 0.0f;
+        
+        if (!currentMusicInstance.isValid())
+        {
+            currentTransition = null; // Limpiar si la instancia no es válida
+            yield break;
+        }
+
+        while (elapsed < duration )
+        {
+            // 1. Interpolación (suavizado)
+            // PauseVal se actualiza entre v_start y v_end.
+            PauseVal = Mathf.Lerp( v_start, v_end, elapsed / duration );
+            
+            // 2. Aplicar el valor fluido a FMOD
+            currentMusicInstance.setParameterByName("Paused", PauseVal);
+            
+            // 3. Incrementar el tiempo usando Time.unscaledDeltaTime (permite ejecución en Time.timeScale = 0)
+            elapsed += Time.unscaledDeltaTime;     
+            
+            yield return null;
+        }
+
+        // 4. Asegurar el valor final y limpiar la referencia
+        PauseVal = v_end;
+        currentMusicInstance.setParameterByName("Paused", PauseVal);
+        currentTransition = null;
     }
 }
