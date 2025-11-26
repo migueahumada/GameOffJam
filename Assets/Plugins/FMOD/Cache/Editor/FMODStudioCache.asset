@@ -11,7 +11,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Desktop/Master.strings.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
+  Path: Assets/Audio/FMODBanks/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638988414016868672
+  FileSizes: []
   Path: Assets/Audio/FMODBanks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
@@ -32,6 +37,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/MainMenu
   m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 8089263983132299302}
+  - {fileID: -1484633653731023173}
+  EditorEvents:
+  - {fileID: 1882167998700259492}
+  - {fileID: -7305457230844571064}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -1484633653731023173}
+  StringsBanks:
+  - {fileID: 8089263983132299302}
+  cacheTime: 638988414016898901
+  cacheVersion: 131633
+--- !u!114 &1264296398487932700
   Path: event:/MainMenu
   Guid:
     Data1: 1426962343
@@ -110,6 +129,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/HubLoop
   m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMODBanks/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638988414016898901
+  FileSizes:
+  - Name: 
+    Value: 914
+  Exists: 1
+--- !u!114 &9021000521002780880
   Path: event:/HubLoop
   Guid:
     Data1: 1643380096
