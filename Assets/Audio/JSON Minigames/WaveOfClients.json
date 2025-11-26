@@ -1,0 +1,1322 @@
+[
+  {
+    "time_ms": "5538.456000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "5718.744281",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "7384.608000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "7587.492412",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "9230.760000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "9475.952062",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "11076.912000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "11268.738731",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "12923.064000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "13125.948412",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "13384.602000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "13587.005644",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "13846.140000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "14091.332062",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "14769.216000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "14972.100412",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "15230.754000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "15465.369150",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "15692.292000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "15905.272556",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "16615.368000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "16817.771644",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "17076.906000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "17300.944238",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "17538.444000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "17762.482238",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "18461.520000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "18664.404412",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "18923.058000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "19136.519325",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "19384.596000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "19587.480412",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "20307.672000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "20499.498731",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "20999.979000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "21106.228894",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "21230.748000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "21390.843994",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "22153.824000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "22346.131500",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "22846.131000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "22995.650081",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "23076.900000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "23247.572906",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "23999.976000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "24181.225819",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "24692.283000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "24777.859838",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "24923.052000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "25104.301819",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "25846.128000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "26059.589325",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "26538.435000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "26677.377169",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "26769.204000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "26929.299994",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "27692.280000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "27905.741325",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "28384.587000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "28490.836894",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "28615.356000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "28807.663500",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "29538.432000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "29783.624062",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "30230.739000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "30348.046575",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "30461.508000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "30599.969400",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "31384.584000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "31480.737750",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "31615.353000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "31700.929838",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "31846.122000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "32006.217994",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "32307.660000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "32510.544412",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "33230.736000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "33358.620488",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "33461.505000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "33567.754894",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "33692.274000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "33862.946906",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "34153.812000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "34324.484906",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "35076.888000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "35289.868556",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "35538.426000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "35783.618062",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "35999.964000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "36213.425325",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "36461.502000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "36696.597919",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "36923.040000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "37178.808975",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "37384.578000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "37587.462412",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "37846.116000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "38070.154238",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "38307.654000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "38521.115325",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "38769.192000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "38939.864906",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "39461.499000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "39568.229662",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "39692.268000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "39873.517819",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "40615.344000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "40860.536062",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "41307.651000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "41446.112400",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "41538.420000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "41730.727500",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "42461.496000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "42664.380412",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "42923.034000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "43147.072238",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "43384.572000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "43598.033325",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "43846.110000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "44080.725150",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "44307.648000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "44531.686238",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "44769.186000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "45014.858831",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "45230.724000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "45454.281469",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "45692.262000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "45905.242556",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "46153.800000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "46238.896069",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "46384.569000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "46470.145838",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "46615.338000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "46797.068588",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "47076.876000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "47258.125819",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "47999.952000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "48138.894169",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "48230.721000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "48348.028575",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "48461.490000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "48674.951325",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "48923.028000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "49114.854731",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "49846.104000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "50219.661319",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "50538.411000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "50645.141662",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "50769.180000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "50929.275994",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "51230.718000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "51422.544731",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "51692.256000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "51916.294238",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "52384.563000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "52512.447488",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "52615.332000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "52785.524138",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "53076.870000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "53279.273644",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "53538.408000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "53751.869325",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "53884.561500",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "54084.561300",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "54230.715000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "54423.022500",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "54461.484000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "54653.791500",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "55384.560000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "55598.021325",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "55730.713500",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "55959.559425",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "56076.867000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "56269.174500",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "56307.636000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "56499.943500",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "57230.712000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "57401.384906",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "57692.250000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "57895.134412",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "58153.788000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "58345.614731",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "58615.326000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "58839.364238",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "59076.864000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "59333.113744",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "59538.402000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "59794.170975",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "59999.940000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "60256.189744",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "60461.478000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "60728.304656",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "60923.016000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "61136.477325",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "61384.554000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "61651.380656",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "61846.092000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "62080.707150",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "62307.630000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "62552.822062",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "62769.168000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "62971.571644",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "63230.706000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "63476.378831",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "63692.244000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "63916.282238",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "64153.782000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "64345.608731",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "64615.320000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "64796.569819",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "65307.627000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "65424.934575",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "65538.396000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "65698.491994",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "65999.934000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "66223.491469",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "66461.472000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "66685.510238",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "67153.779000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "67313.874994",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "67384.548000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "67587.432412",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "67846.086000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "68048.489644",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "68307.624000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "68478.296906",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "68999.931000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "69127.815488",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "69230.700000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "69401.372906",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "69692.238000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "69884.064731",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "70153.776000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "70345.602731",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "70846.083000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "70973.967488",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "71076.852000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "71268.678731",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "71538.390000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "71719.639819",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "71999.928000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "72148.966312",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "72692.235000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "72841.273312",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "73384.542000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "73544.637994",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "73846.080000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "74037.906731",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "74538.387000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "74719.636819",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "75230.694000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "75423.001500",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "75692.232000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "75830.212631",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "76038.385500",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "76220.116088",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "77538.384000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "77719.633819",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "77884.537500",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "78076.364231",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "78346.075500",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "78537.902231",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "79384.536000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "79576.362731",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "81230.688000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "81422.995500",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "83076.840000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "83258.089819",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "83538.378000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "83655.685575",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "83769.147000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "83865.300750",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "83999.916000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "84170.588906",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "84922.992000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "85125.876412",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "85384.530000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "85544.625994",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "85615.299000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "85722.029662",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "85846.068000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "86006.163994",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "86769.144000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "87205.682025",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "87461.451000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "87536.450925",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "87692.220000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "87831.162169",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "88153.758000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "88346.065500",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "88615.296000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "88839.334238",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "89307.603000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "89435.487488",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "89538.372000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "89709.044906",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "89999.910000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "90170.582906",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "90461.448000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "90632.120906",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "90922.986000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "91093.658906",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "91384.524000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "91586.927644",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "91846.062000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "92070.100238",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "92307.600000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "92488.849819",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "92769.138000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "92982.599325",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "93230.676000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "93401.348906",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "93692.214000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "93862.886906",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "94153.752000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "94303.271081",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "94499.905500",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "94617.213075",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "94846.059000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "94984.520400",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "95307.597000",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "95422.981500",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "95999.904000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "96159.519225",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "96346.057500",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "96505.672725",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "96692.211000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "96873.941588",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "97153.749000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "97269.133500",
+    "eventName": "input up"
+  }
+]
