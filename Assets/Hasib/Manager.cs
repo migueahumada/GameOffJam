@@ -23,20 +23,22 @@ public class Manager : MonoBehaviour
             {
                 ShowPauseMenu();
             }
-            isPaused = !isPaused;
+           
         }
     }
 
-    void ShowPauseMenu()
+    public void ShowPauseMenu()
     {
         
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
+        isPaused = !isPaused;
     }
 
-    void HidePauseMenu()
+    public void HidePauseMenu()
     {
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
+        isPaused = !isPaused;
     }
 }
