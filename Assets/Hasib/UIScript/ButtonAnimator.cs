@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
@@ -15,13 +16,23 @@ public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         originalScale = transform.localScale;
     }
 
+    private void OnEnable()
+    {
+         transform.localScale= originalScale;
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-        transform.DOScale(hoverScale, duration).SetEase(Ease.OutBack);
+        Debug.Log("OnPointerEnter");
+        Debug.Log("Current scale: " + transform.localScale);
+
+        transform.DOScale(hoverScale, duration).SetEase(Ease.OutBack).SetUpdate(true)
+            ;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        transform.DOScale(originalScale, duration).SetEase(Ease.OutBack);
+        transform.DOScale(originalScale, duration).SetEase(Ease.OutBack).SetUpdate(true)
+            ;
     }
 }

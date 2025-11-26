@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public void LoadGame()
+    public void LoadGame(int level)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(level);
 
     }
 }
