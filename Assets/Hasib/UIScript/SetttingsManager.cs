@@ -35,7 +35,7 @@ public class SetttingsManager : MonoBehaviour
     public void SetSFXValue()
     {
         currentSFXValue = SFX.value;
-        Debug.Log("CSF: "+currentSFXValue);
+        Debug.Log("CSFX: "+currentSFXValue);
     }
 
     public void SetMusicValue()
