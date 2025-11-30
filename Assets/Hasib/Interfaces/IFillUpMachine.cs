@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class IFillUpMachine : MonoBehaviour, IInterectable
 {
-    
-    Boolean isCompleted = false; 
+    [SerializeField] private GameObject showGamePanel;
+    bool isCompleted = false; 
     public void Interect()
     {
         if (!isCompleted)
         {
-            Debug.Log("Interected with fillup");
+            Debug.Log("Load fillup game");
+            
             isCompleted = !isCompleted;
         }
     }
@@ -18,11 +19,12 @@ public class IFillUpMachine : MonoBehaviour, IInterectable
     {
         if (!isCompleted)
         {
-            Debug.Log("Press E");
+            showGamePanel.SetActive(true);
         }
     }
 
     public void HideInterectionText()
     {
+        showGamePanel.SetActive(false);
     }
 }

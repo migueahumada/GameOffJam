@@ -26,8 +26,13 @@ public class InterectionPoint : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        _currentInteractable.HideInterectionText();
-        _currentInteractable = null;
+        _currentInteractable = other.GetComponent<IInterectable>();
+        if (_currentInteractable != null)
+        {
+            _currentInteractable.HideInterectionText();
+            _currentInteractable = null;
+        }
+       
         
     }
 }

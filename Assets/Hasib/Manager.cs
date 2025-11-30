@@ -51,4 +51,5 @@ public class Manager : MonoBehaviour
         pauseMenu.SetActive(false);
         isPaused = !isPaused;
     }
+    
 }
