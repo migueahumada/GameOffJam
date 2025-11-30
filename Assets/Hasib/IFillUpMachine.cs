@@ -1,9 +1,10 @@
+using System;
 using UnityEngine;
 
 public class IFillUpMachine : MonoBehaviour, IInterectable
 {
-    [SerializeField] private GameObject textPrompt;
-    bool isCompleted = false; 
+    
+    Boolean isCompleted = false; 
     public void Interect()
     {
         if (!isCompleted)
@@ -18,12 +19,10 @@ public class IFillUpMachine : MonoBehaviour, IInterectable
         if (!isCompleted)
         {
             Debug.Log("Press E");
-            textPrompt.SetActive(true);
         }
     }
 
     public void HideInterectionText()
     {
-        textPrompt.SetActive(false);
     }
 }

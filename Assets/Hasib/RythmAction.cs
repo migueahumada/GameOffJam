@@ -1,14 +1,15 @@
+using System;
 using System.Collections.Generic;
 
 [System.Serializable]
 public class RhythmAction
 {
-    public string name;
-    public float startTimeMs;
-    public float endTimeMs;
-    public float DurationMs => endTimeMs - startTimeMs;
+    public String name;
+    public Single startTimeMs;
+    public Single endTimeMs;
+    public Single DurationMs => endTimeMs - startTimeMs;
 
-    public RhythmAction(string name, float start, float end)
+    public RhythmAction(String name, Single start, Single end)
     {
         this.name = name;
         this.startTimeMs = start;
@@ -17,22 +18,24 @@ public class RhythmAction
 
     public static List<RhythmAction> PairEvents(List<TimelineEvent> events)
     {
-        var pairs = new List<RhythmAction>();
-        var stack = new Dictionary<string, float>();
+        List<RhythmAction> pairs = new List<RhythmAction>();
+        Dictionary<String, Single> stack = new Dictionary<String, Single>();
 
-        foreach (var e in events)
+        foreach (TimelineEvent e in events)
         {
+            Single eventTime = e.GetTimeMs(); 
+
             if (e.eventName.EndsWith("start"))
             {
-                string baseName = e.eventName.Replace(" start", "");
-                stack[baseName] = e.time_ms;
+                String baseName = e.eventName.Replace(" start", "");
+                stack[baseName] = eventTime;
             }
             else if (e.eventName.EndsWith("finish"))
             {
-                string baseName = e.eventName.Replace(" finish", "");
-                if (stack.TryGetValue(baseName, out float start))
+                String baseName = e.eventName.Replace(" finish", "");
+                if (stack.TryGetValue(baseName, out Single start))
                 {
-                    pairs.Add(new RhythmAction(baseName, start, e.time_ms));
+                    pairs.Add(new RhythmAction(baseName, start, eventTime));
                     stack.Remove(baseName);
                 }
             }

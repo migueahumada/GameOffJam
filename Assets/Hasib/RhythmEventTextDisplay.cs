@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 using System.Linq;
@@ -31,16 +32,21 @@ public class RhythmEventTextDisplay : MonoBehaviour
             return;
 
         string baseName = evt.eventName.Replace(" start", "").Replace(" finish", "");
+        
+        // 1. Get the float time for the current event
+        float evtTime = evt.GetTimeMs(); 
 
         // START EVENT
         if (evt.eventName.EndsWith("start"))
         {
-            var finish = timeline.Events.FirstOrDefault(e =>
-                e.eventName == $"{baseName} finish" && e.time_ms > evt.time_ms);
+            // 2. Find matching finish using GetTimeMs() for comparison
+            TimelineEvent finish = timeline.Events.FirstOrDefault(e =>
+                e.eventName == $"{baseName} finish" && e.GetTimeMs() > evtTime);
 
             if (finish != null)
             {
-                float duration = (finish.time_ms - evt.time_ms) / 1000f;
+                // 3. Calculate duration using GetTimeMs()
+                float duration = (finish.GetTimeMs() - evtTime) / 1000f;
                 textDisplay.text = $"{baseName} (Duration: {duration:F3}s)";
             }
             else
@@ -53,9 +59,8 @@ public class RhythmEventTextDisplay : MonoBehaviour
         {
             textDisplay.text = $"{baseName} finished";
 
-            // Clear text shortly after the finish
             CancelInvoke(nameof(ClearText));
-            Invoke(nameof(ClearText), 0.2f); // clear after 0.2s (tweak as desired)
+            Invoke(nameof(ClearText), 0.2f); 
         }
     }
 

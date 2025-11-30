@@ -7,7 +7,7 @@ public class Manager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -29,7 +29,12 @@ public class Manager : MonoBehaviour
 
     public void ShowPauseMenu()
     {
-        
+        if (AudioManager.instance != null)
+        {
+            // Calls lerp function to change the pause parameter in fmod
+            AudioManager.instance.PauseMusicTransition();
+        }
+
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
         isPaused = !isPaused;
@@ -37,6 +42,11 @@ public class Manager : MonoBehaviour
 
     public void HidePauseMenu()
     {
+        if (AudioManager.instance != null)
+        {
+            // Calls lerp function to change the pause parameter in fmod
+            AudioManager.instance.UnpauseMusicTransition();
+        }
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         isPaused = !isPaused;
