@@ -8,15 +8,19 @@ public class SetttingsManager : MonoBehaviour
     [SerializeField] private Slider Music;
     [SerializeField] private Slider SFX;
     [SerializeField] private float defaultValue = 0.75f;
-
+    private const string SFXSliderKey = "SfxSliderValue";
+    private const string MusicSliderKey = "MusicSliderValue";
     [SerializeField]
     float currentSFXValue;
     [SerializeField]
     float currentMusicValue;
     private void Awake()
     {
-        Music.value = defaultValue;
-        SFX.value = defaultValue;
+        float SFXsavedValue = PlayerPrefs.GetFloat(SFXSliderKey, defaultValue);
+        float MusicsavedValue = PlayerPrefs.GetFloat(MusicSliderKey, defaultValue);
+        
+        SFX.value = SFXsavedValue;
+        Music.value = MusicsavedValue;
     }
 
 
@@ -35,12 +39,16 @@ public class SetttingsManager : MonoBehaviour
     public void SetSFXValue()
     {
         currentSFXValue = SFX.value;
+        PlayerPrefs.SetFloat(SFXSliderKey, currentSFXValue);
+        PlayerPrefs.Save();  
+        
         Debug.Log("CSFX: "+currentSFXValue);
     }
 
     public void SetMusicValue()
     {
         currentMusicValue =Music.value;
+        PlayerPrefs.SetFloat(MusicSliderKey, currentMusicValue);
         Debug.Log("CM: "+currentMusicValue);
     }
 }
