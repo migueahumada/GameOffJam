@@ -3,6 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public static MainMenuManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            
+        }
+    }
     public void LoadGame(int level)
     {
         SceneManager.LoadScene(level);

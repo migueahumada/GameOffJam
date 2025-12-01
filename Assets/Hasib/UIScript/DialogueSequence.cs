@@ -26,12 +26,16 @@ public class DialogueSequence : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            
             ShowNextImage();
         }
     }
 
     private void ShowNextImage()
     {
+        //audio to accept
+        SFXManager.instance.PlaySFX(4);
+        
         currentIndex++;
 
         // Finished? Deactivate object

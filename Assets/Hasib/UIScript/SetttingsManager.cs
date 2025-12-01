@@ -19,8 +19,8 @@ public class SetttingsManager : MonoBehaviour
         float SFXsavedValue = PlayerPrefs.GetFloat(SFXSliderKey, defaultValue);
         float MusicsavedValue = PlayerPrefs.GetFloat(MusicSliderKey, defaultValue);
         
-        SFX.value = SFXsavedValue;
-        Music.value = MusicsavedValue;
+        SFXManager.instance.sfxBus.setVolume(SFXsavedValue);
+        SFXManager.instance.musicBus.setVolume(MusicsavedValue);
     }
 
 
@@ -41,7 +41,7 @@ public class SetttingsManager : MonoBehaviour
         currentSFXValue = SFX.value;
         PlayerPrefs.SetFloat(SFXSliderKey, currentSFXValue);
         PlayerPrefs.Save();  
-        
+        SFXManager.instance.sfxBus.setVolume(currentSFXValue);
         Debug.Log("CSFX: "+currentSFXValue);
     }
 
@@ -49,6 +49,7 @@ public class SetttingsManager : MonoBehaviour
     {
         currentMusicValue =Music.value;
         PlayerPrefs.SetFloat(MusicSliderKey, currentMusicValue);
+        SFXManager.instance.musicBus.setVolume(currentMusicValue);
         Debug.Log("CM: "+currentMusicValue);
     }
 }

@@ -28,6 +28,11 @@ public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
         transform.DOScale(hoverScale, duration).SetEase(Ease.OutBack).SetUpdate(true)
             ;
+        //notificacion sfx
+        if (SFXManager.instance != null)
+        {
+            SFXManager.instance.PlaySFX(1);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)

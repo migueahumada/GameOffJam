@@ -10,7 +10,7 @@ public class IFillUpMachine : MonoBehaviour, IInterectable
         if (!isCompleted)
         {
             Debug.Log("Load fillup game");
-            
+            MainMenuManager.instance.LoadGame(2);
             isCompleted = !isCompleted;
         }
     }

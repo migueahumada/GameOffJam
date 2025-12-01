@@ -11,6 +11,14 @@ public class IGrindMachine : MonoBehaviour,IInterectable
             Debug.Log("Load Grind Game");
             
             isCompleted = !isCompleted;
+            if (MainMenuManager.instance != null)
+            {
+                MainMenuManager.instance.LoadGame(2);
+            }
+            else
+            {
+                Debug.Log("mainmenumanager no se ha inicializado");
+            }
         }
     }
 

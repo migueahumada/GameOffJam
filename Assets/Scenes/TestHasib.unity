@@ -1107,7 +1107,7 @@ MonoBehaviour:
       Data2: 1233586088
       Data3: 653168807
       Data4: -2108111351
-    Path: event:/BaristaMinigame
+    Path: event:/Music/BaristaMinigame
   jsonFile: {fileID: 4900000, guid: 50021148e87a6b349aa2ef42e4b1bee3, type: 3}
   autoStart: 1
 --- !u!1 &60961251005992900
