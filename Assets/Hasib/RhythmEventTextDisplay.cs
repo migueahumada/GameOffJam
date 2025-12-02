@@ -22,7 +22,7 @@ public class RhythmEventTextDisplay : MonoBehaviour
 
     void Start()
     {
-        timeline = FindObjectOfType<FMODEventTimeline>();
+        timeline = FindAnyObjectByType<FMODEventTimeline>();
         if (textDisplay) textDisplay.text = "";
     }
 

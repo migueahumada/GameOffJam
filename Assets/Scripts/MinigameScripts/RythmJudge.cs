@@ -16,8 +16,10 @@ namespace MinigameScripts
             public bool Processed;
         }
 
+
         [Header("Visuals")] 
         [SerializeField] private Animator _armAnimator;
+        [SerializeField] private Animator _machineAnimator;
 
         [Header("Timeline Reference")]
         [SerializeField] private FMODEventTimeline _timeline;
@@ -26,11 +28,18 @@ namespace MinigameScripts
         public float WindowMs = 300f; // Window of 300ms (±150ms)
         public float InputOffsetMs = 0f; 
 
+        public GameObject _gameOver;
+
         private List<RhythmPair> _rhythmPairs = new List<RhythmPair>();
         private int _currentPairIndex = 0;
         private bool _isHoldingCorrectly = false;
         private int _successfulPairs = 0;
         private int _totalPairs = 0;
+        private bool pauseMenu = false;
+
+        public static event Action OnMiss;
+        public static event Action OnStartPour;
+        public static event Action OnPause;
 
         private static readonly int Pressed = Animator.StringToHash("Pressed");
 
@@ -44,10 +53,25 @@ namespace MinigameScripts
         {
             var keyboard = Keyboard.current;
             if (keyboard == null) return;
-
+            // -- Menu Pausa
+            if (keyboard.escapeKey.wasPressedThisFrame) 
+            {
+                OnPause?.Invoke();
+                if (pauseMenu) _armAnimator.enabled = false;
+                else _armAnimator.enabled = true;
+                pauseMenu = !pauseMenu;
+            }
             // --- Visuals Only ---
-            if (keyboard.spaceKey.wasPressedThisFrame) _armAnimator.SetBool(Pressed, true);
-            if (keyboard.spaceKey.wasReleasedThisFrame) _armAnimator.SetBool(Pressed, false);
+            if (keyboard.spaceKey.wasPressedThisFrame) 
+            {
+                _armAnimator.SetBool(Pressed, true);
+                _machineAnimator.SetBool(Pressed, true);
+            }
+            if (keyboard.spaceKey.wasReleasedThisFrame)
+            {
+                _armAnimator.SetBool(Pressed, false);
+                _machineAnimator.SetBool(Pressed, false);
+            }    
 
             // --- Logic Safety Checks ---
             if (_rhythmPairs.Count == 0 || _currentPairIndex >= _rhythmPairs.Count) return;
@@ -60,6 +84,12 @@ namespace MinigameScripts
             if (!_isHoldingCorrectly && currentTimeMs > currentPair.StartTimeMs + (WindowMs / 2f))
             {
                  Debug.Log($"❌ Missed Note {_currentPairIndex} (Too Slow!)");
+                 _armAnimator.SetTrigger("Miss");
+                 // miss notification
+                 OnMiss?.Invoke();
+                 SFXManager.instance.PlaySFX(7);
+                 _armAnimator.SetBool(Pressed, false);
+                 _machineAnimator.SetBool(Pressed, false);
                  currentPair.Processed = true; // Mark as done so we don't double count
                  AdvanceToNextPair();
                  return;
@@ -69,6 +99,12 @@ namespace MinigameScripts
             if (_isHoldingCorrectly && currentTimeMs > currentPair.EndTimeMs + (WindowMs / 2f))
             {
                  Debug.Log($"❌ Held too long! {_currentPairIndex}");
+                 _armAnimator.SetTrigger("Miss");
+                 // miss notification
+                 OnMiss?.Invoke();
+                 SFXManager.instance.PlaySFX(7);
+                 _armAnimator.SetBool(Pressed, false);
+                 _machineAnimator.SetBool(Pressed, false);
                  currentPair.Processed = true;
                  AdvanceToNextPair();
                  return;
@@ -83,7 +119,10 @@ namespace MinigameScripts
                 // Check if inside window
                 if (Mathf.Abs(diff) <= (WindowMs / 2f))
                 {
+                    OnStartPour?.Invoke();
+                    SFXManager.instance.PlaySFX(5);
                     _isHoldingCorrectly = true;
+                    
                     Debug.Log($"✅ CAUGHT START! (Diff: {diff:F0}ms)");
                 }
                 else
@@ -93,12 +132,24 @@ namespace MinigameScripts
                     {
                         // Negative diff means we are EARLY (Time < StartTime)
                         Debug.Log($"⚠️ Too Early! Wait! (Early by {Mathf.Abs(diff):F0}ms)");
+                        SFXManager.instance.PlaySFX(7);
+                        _armAnimator.SetTrigger("Miss");
+                        // miss notification
+                        OnMiss?.Invoke();
+                        _armAnimator.SetBool(Pressed, false);
+                        _machineAnimator.SetBool(Pressed, false);
                         // DO NOT ADVANCE! Let the player try again or wait for the note.
                     }
                     else
                     {
                         // Positive diff means we are LATE (Time > StartTime)
                         Debug.Log($"❌ Too Late! (Late by {diff:F0}ms)");
+                        SFXManager.instance.PlaySFX(7);
+                        _armAnimator.SetTrigger("Miss");
+                        // miss notification
+                        OnMiss?.Invoke();
+                        _armAnimator.SetBool(Pressed, false);
+                        _machineAnimator.SetBool(Pressed, false);
                         // If we are late, we missed it. Skip to next.
                         AdvanceToNextPair();
                     }
@@ -114,12 +165,19 @@ namespace MinigameScripts
 
                     if (Mathf.Abs(diff) <= (WindowMs / 2f))
                     {
+                        SFXManager.instance.PlaySFX(6);
                         _successfulPairs++;
                         Debug.Log($"✨ PERFECT RELEASE! (Diff: {diff:F0}ms)");
                     }
                     else
                     {
                         Debug.Log($"❌ Released Badly (Diff: {diff:F0}ms)");
+                        SFXManager.instance.PlaySFX(7);
+                        _armAnimator.SetTrigger("Miss");
+                        // miss notification
+                        OnMiss?.Invoke();
+                        _armAnimator.SetBool(Pressed, false);
+                        _machineAnimator.SetBool(Pressed, false);
                     }
                     
                     // Whether good or bad release, this note is done.
@@ -165,6 +223,10 @@ namespace MinigameScripts
             Debug.Log($"Judge: Parsed {_totalPairs} pairs.");
         }
 
+        private void showGameOver()
+        {
+            Instantiate(_gameOver);
+        }
         private void AdvanceToNextPair()
         {
             _currentPairIndex++;
@@ -174,6 +236,9 @@ namespace MinigameScripts
             {
                 float score = _totalPairs > 0 ? ((float)_successfulPairs / _totalPairs) * 100f : 0;
                 Debug.Log($"🏁 GAME OVER! Score: {score:F1}%");
+                Invoke("showGameOver", 2);
+            
+                
             }
         }
     }

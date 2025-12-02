@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using FMODUnity;
 using FMOD.Studio;
 using System;
-using System.Globalization; // Needed for float parsing
+using System.Globalization;
+using MinigameScripts; // Needed for float parsing
 
 [System.Serializable]
 public class TimelineEvent
@@ -34,6 +35,8 @@ public class FMODEventTimeline : MonoBehaviour
     [Header("Settings")]
     public Boolean autoStart = true;
 
+    private bool pausedMenu = false;
+
     private EventInstance _musicInstance;
     private List<TimelineEvent> _timelineEvents = new();
     private Int32 _nextEventIndex;
@@ -43,8 +46,17 @@ public class FMODEventTimeline : MonoBehaviour
     // Public getter
     public List<TimelineEvent> Events => _timelineEvents ?? new List<TimelineEvent>();
 
+    private RhythmJudge rhythmJudge;
     public static event Action<TimelineEvent> OnTimelineEventTriggered;
 
+    private void OnEnable()
+    {
+        RhythmJudge.OnPause += HandleOnPause;
+    }
+    private void Oisable()
+    {
+        RhythmJudge.OnPause -= HandleOnPause;
+    }
     private void Awake()
     {
         if (jsonFile == null)
@@ -77,7 +89,7 @@ public class FMODEventTimeline : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void Start()
     {
         _musicInstance = RuntimeManager.CreateInstance(fmodMusic);
         
@@ -86,6 +98,12 @@ public class FMODEventTimeline : MonoBehaviour
             _musicInstance.start();
             Debug.Log("🎵 Music Started");
         }
+    }
+
+    public void HandleOnPause()
+    {
+        _musicInstance.setPaused(pausedMenu);
+        pausedMenu = !pausedMenu;
     }
 
     private void Update()

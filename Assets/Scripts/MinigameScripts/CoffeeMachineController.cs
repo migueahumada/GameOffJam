@@ -5,20 +5,21 @@ namespace MinigameScripts
 {
     public class CoffeeMachineController : MonoBehaviour
     {
-        [Header("Animators")]
-        [SerializeField] private Animator _machineAnimator;
-        [SerializeField] private Animator _cupAnimator;
-
         [Header("Pour Effect")]
         [SerializeField] private GameObject _pourStream;
         
         [Header("FMOD Timeline")]
         [SerializeField] private FMODEventTimeline _fmodTimeline;
 
-        private Boolean _isPouring;
+        [Header("Cups")]
+        [SerializeField] private GameObject[] _cups;
 
-        private static readonly Int32 CupIntro = Animator.StringToHash("CupIntro");
-        private static readonly Int32 CupOutro = Animator.StringToHash("CupOutro");
+        //private Boolean _isPouring;
+
+        //animation triggers
+        public static event Action OnPrepStart;
+        public static event Action OnPrepFinish;
+
         private static readonly Int32 MachinePress = Animator.StringToHash("MachinePress");
         private static readonly Int32 AnimSpeed = Animator.StringToHash("Speed");
 
@@ -35,7 +36,7 @@ namespace MinigameScripts
         private void Start()
         {
             if (_fmodTimeline == null)
-                _fmodTimeline = FindObjectOfType<FMODEventTimeline>();
+                _fmodTimeline = FindFirstObjectByType<FMODEventTimeline>();
 
             if (_pourStream) _pourStream.SetActive(false);
         }
@@ -52,46 +53,51 @@ namespace MinigameScripts
                 {
                     HandleCupEntry(evtName);
                 }
-                else if (evtName.Contains("input"))
-                {
-                    StartPour();
-                }
+
             }
             else if (isFinish)
             {
-                if (evtName.Contains("input"))
-                {
-                    StopPour();
-                    
-                    _cupAnimator.SetTrigger(CupOutro);
-                }
+                Debug.Log("PREP FINISH");
+                OnPrepStart?.Invoke();
+                SFXManager.instance.PlaySFX(9);
+            }
+
+
+            if (evtName.Contains("input up"))
+            {
+                // PREP CUP OUT
+                OnPrepFinish?.Invoke();
+                
+                //StartPour();
+                //notify start input
+            }
+            else if (evtName.Contains("input down"))
+            {
+                
+                
+                //StopPour();
+
             }
         }
 
         private void HandleCupEntry(String eventName)
         {
-            Single speedMultiplier = 1f;
-
-            if (eventName.Contains("1c")) speedMultiplier = 4f; 
-            else if (eventName.Contains("2c")) speedMultiplier = 2f;
-            else speedMultiplier = 1f;
-
-            _cupAnimator.SetFloat(AnimSpeed, speedMultiplier);
-            _cupAnimator.SetTrigger(CupIntro);
+            SFXManager.instance.PlaySFX(8);
+            if (eventName.Contains("2c norm")) Instantiate(_cups[1]); 
+            else if (eventName.Contains("2c fast")) Instantiate(_cups[2]);
+            else Instantiate(_cups[0]);
         }
 
-        private void StartPour()
-        {
-            _machineAnimator.SetTrigger(MachinePress);
-            if (_pourStream) _pourStream.SetActive(true);
-            _isPouring = true;
-        }
+        //-- private void StartPour()
+        //{
+        //    if (_pourStream) _pourStream.SetActive(true);
+        //    _isPouring = true;
+        //}
 
-        private void StopPour()
-        {
-            _machineAnimator.SetTrigger(MachinePress);
-            if (_pourStream) _pourStream.SetActive(false);
-            _isPouring = false;
-        }
+        //private void StopPour()
+        //{
+        //    if (_pourStream) _pourStream.SetActive(false);
+        //    _isPouring = false;
+        //} _
     }
 }

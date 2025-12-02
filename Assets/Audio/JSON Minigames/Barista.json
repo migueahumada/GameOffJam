@@ -1,6 +1,6 @@
 [
   {
-    "time_ms": "5714.290000",
+    "time_ms": "5732.742395",
     "eventName": "prep 4c start"
   },
   {
@@ -16,7 +16,7 @@
     "eventName": "input up"
   },
   {
-    "time_ms": "10285.722000",
+    "time_ms": "10304.174395",
     "eventName": "prep 4c start"
   },
   {
@@ -24,7 +24,7 @@
     "eventName": "prep 4c finish"
   },
   {
-    "time_ms": "12571.438000",
+    "time_ms": "12575.009431",
     "eventName": "input down"
   },
   {
@@ -32,7 +32,7 @@
     "eventName": "input up"
   },
   {
-    "time_ms": "14857.154000",
+    "time_ms": "14875.606395",
     "eventName": "prep 4c start"
   },
   {
@@ -48,7 +48,7 @@
     "eventName": "input up"
   },
   {
-    "time_ms": "19428.586000",
+    "time_ms": "19447.038395",
     "eventName": "prep 4c start"
   },
   {
@@ -56,11 +56,11 @@
     "eventName": "prep 4c finish"
   },
   {
-    "time_ms": "21714.302000",
+    "time_ms": "21716.682954",
     "eventName": "input down"
   },
   {
-    "time_ms": "22857.160000",
+    "time_ms": "22304.183395",
     "eventName": "prep 2c norm start"
   },
   {
@@ -68,23 +68,23 @@
     "eventName": "input up"
   },
   {
-    "time_ms": "24000.018000",
+    "time_ms": "23428.589000",
     "eventName": "prep 2c norm finish"
   },
   {
     "time_ms": "24000.018000",
     "eventName": "input down"
+  },
+  {
+    "time_ms": "24589.899395",
+    "eventName": "prep 2c norm start"
   },
   {
     "time_ms": "25142.876000",
-    "eventName": "prep 2c norm start"
+    "eventName": "input up"
   },
   {
     "time_ms": "25714.305000",
-    "eventName": "input up"
-  },
-  {
-    "time_ms": "26285.734000",
     "eventName": "prep 2c norm finish"
   },
   {
@@ -92,15 +92,15 @@
     "eventName": "input down"
   },
   {
-    "time_ms": "27428.592000",
+    "time_ms": "26875.615395",
     "eventName": "prep 2c norm start"
   },
   {
-    "time_ms": "28000.021000",
+    "time_ms": "27428.592000",
     "eventName": "input up"
   },
   {
-    "time_ms": "28571.450000",
+    "time_ms": "28000.021000",
     "eventName": "prep 2c norm finish"
   },
   {
@@ -108,39 +108,23 @@
     "eventName": "input down"
   },
   {
-    "time_ms": "29142.879000",
-    "eventName": "prep 2c fast start"
+    "time_ms": "28639.307194",
+    "eventName": "prep 4c start"
   },
   {
-    "time_ms": "30285.737000",
+    "time_ms": "29714.308000",
     "eventName": "input up"
   },
   {
     "time_ms": "30285.737000",
-    "eventName": "prep 2c fast finish"
-  },
-  {
-    "time_ms": "30285.737000",
-    "eventName": "input down"
+    "eventName": "prep 4c finish"
   },
   {
     "time_ms": "30857.166000",
-    "eventName": "input up"
-  },
-  {
-    "time_ms": "30857.166000",
-    "eventName": "prep 2c fast start"
-  },
-  {
-    "time_ms": "32000.024000",
-    "eventName": "prep 2c fast finish"
-  },
-  {
-    "time_ms": "32000.024000",
     "eventName": "input down"
   },
   {
-    "time_ms": "32000.024000",
+    "time_ms": "31447.047395",
     "eventName": "prep 2c norm start"
   },
   {
@@ -148,23 +132,23 @@
     "eventName": "input up"
   },
   {
-    "time_ms": "33142.882000",
+    "time_ms": "32571.453000",
     "eventName": "prep 2c norm finish"
   },
   {
     "time_ms": "33142.882000",
     "eventName": "input down"
+  },
+  {
+    "time_ms": "33732.763395",
+    "eventName": "prep 2c norm start"
   },
   {
     "time_ms": "34285.740000",
-    "eventName": "prep 2c norm start"
-  },
-  {
-    "time_ms": "34857.169000",
     "eventName": "input up"
   },
   {
-    "time_ms": "35428.598000",
+    "time_ms": "34857.169000",
     "eventName": "prep 2c norm finish"
   },
   {
@@ -172,15 +156,15 @@
     "eventName": "input down"
   },
   {
-    "time_ms": "36571.456000",
+    "time_ms": "36018.479395",
     "eventName": "prep 2c norm start"
   },
   {
-    "time_ms": "37142.885000",
+    "time_ms": "36571.456000",
     "eventName": "input up"
   },
   {
-    "time_ms": "37714.314000",
+    "time_ms": "37142.885000",
     "eventName": "prep 2c norm finish"
   },
   {
@@ -189,14 +173,14 @@
   },
   {
     "time_ms": "38857.172000",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "38929.195864",
     "eventName": "prep 2c fast start"
   },
   {
     "time_ms": "39428.601000",
-    "eventName": "input up"
-  },
-  {
-    "time_ms": "40000.030000",
     "eventName": "prep 2c fast finish"
   },
   {
@@ -204,7 +188,7 @@
     "eventName": "input down"
   },
   {
-    "time_ms": "40000.030000",
+    "time_ms": "40066.696717",
     "eventName": "prep 2c fast start"
   },
   {
@@ -212,7 +196,7 @@
     "eventName": "input up"
   },
   {
-    "time_ms": "41142.888000",
+    "time_ms": "40571.459000",
     "eventName": "prep 2c fast finish"
   },
   {
@@ -220,19 +204,11 @@
     "eventName": "input down"
   },
   {
-    "time_ms": "41142.888000",
-    "eventName": "prep 2c norm start"
-  },
-  {
     "time_ms": "41714.317000",
     "eventName": "input up"
   },
   {
-    "time_ms": "42285.746000",
-    "eventName": "prep 2c norm finish"
-  },
-  {
-    "time_ms": "42285.746000",
+    "time_ms": "42304.198395",
     "eventName": "prep 4c start"
   },
   {
@@ -248,7 +224,7 @@
     "eventName": "input up"
   },
   {
-    "time_ms": "46857.178000",
+    "time_ms": "46875.630395",
     "eventName": "prep 4c start"
   },
   {
@@ -264,7 +240,7 @@
     "eventName": "input up"
   },
   {
-    "time_ms": "51428.610000",
+    "time_ms": "51447.062395",
     "eventName": "prep 4c start"
   },
   {
@@ -276,24 +252,28 @@
     "eventName": "input down"
   },
   {
-    "time_ms": "54857.184000",
+    "time_ms": "53776.230808",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "55373.255816",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "55428.613000",
     "eventName": "input up"
-  },
-  {
-    "time_ms": "54857.184000",
-    "eventName": "prep 2c norm start"
-  },
-  {
-    "time_ms": "56000.042000",
-    "eventName": "prep 2c norm finish"
   },
   {
     "time_ms": "56000.042000",
     "eventName": "input down"
   },
   {
-    "time_ms": "57142.900000",
+    "time_ms": "57161.352395",
     "eventName": "prep 2c fast start"
+  },
+  {
+    "time_ms": "57678.019449",
+    "eventName": "prep 2c fast finish"
   },
   {
     "time_ms": "57714.329000",
@@ -301,31 +281,31 @@
   },
   {
     "time_ms": "58285.758000",
-    "eventName": "prep 2c fast finish"
-  },
-  {
-    "time_ms": "58285.758000",
     "eventName": "input down"
   },
   {
-    "time_ms": "58285.758000",
+    "time_ms": "58329.210414",
     "eventName": "prep 2c fast start"
+  },
+  {
+    "time_ms": "58823.853642",
+    "eventName": "prep 2c fast finish"
   },
   {
     "time_ms": "58857.187000",
     "eventName": "input up"
   },
   {
-    "time_ms": "59428.616000",
-    "eventName": "prep 2c fast finish"
+    "time_ms": "58926.829909",
+    "eventName": "prep 2c norm start"
   },
   {
     "time_ms": "59428.616000",
     "eventName": "input down"
   },
   {
-    "time_ms": "59428.616000",
-    "eventName": "prep 2c norm start"
+    "time_ms": "59942.306861",
+    "eventName": "prep 2c norm finish"
   },
   {
     "time_ms": "60000.045000",
@@ -333,38 +313,34 @@
   },
   {
     "time_ms": "60571.474000",
-    "eventName": "prep 2c norm finish"
+    "eventName": "input down"
   },
   {
-    "time_ms": "60571.474000",
-    "eventName": "input down"
+    "time_ms": "61161.355395",
+    "eventName": "prep 2c norm start"
   },
   {
     "time_ms": "61714.332000",
-    "eventName": "prep 2c norm start"
+    "eventName": "input up"
   },
   {
     "time_ms": "62285.761000",
-    "eventName": "input up"
-  },
-  {
-    "time_ms": "62857.190000",
     "eventName": "prep 2c norm finish"
   },
   {
     "time_ms": "62857.190000",
     "eventName": "input down"
+  },
+  {
+    "time_ms": "63447.071395",
+    "eventName": "prep 2c norm start"
   },
   {
     "time_ms": "64000.048000",
-    "eventName": "prep 2c norm start"
-  },
-  {
-    "time_ms": "64571.477000",
     "eventName": "input up"
   },
   {
-    "time_ms": "65142.906000",
+    "time_ms": "64571.477000",
     "eventName": "prep 2c norm finish"
   },
   {
@@ -372,72 +348,44 @@
     "eventName": "input down"
   },
   {
+    "time_ms": "65732.787395",
+    "eventName": "prep 2c norm start"
+  },
+  {
     "time_ms": "66285.764000",
-    "eventName": "prep 2c fast start"
+    "eventName": "input up"
   },
   {
     "time_ms": "66857.193000",
-    "eventName": "input up"
-  },
-  {
-    "time_ms": "67428.622000",
-    "eventName": "prep 2c fast finish"
+    "eventName": "prep 2c norm finish"
   },
   {
     "time_ms": "67428.622000",
     "eventName": "input down"
   },
   {
-    "time_ms": "68000.051000",
-    "eventName": "input up"
-  },
-  {
-    "time_ms": "68000.051000",
-    "eventName": "prep 1c fastest start"
+    "time_ms": "67554.217332",
+    "eventName": "prep 4c start"
   },
   {
     "time_ms": "68571.480000",
-    "eventName": "prep 1c fastest finish"
-  },
-  {
-    "time_ms": "68571.480000",
-    "eventName": "input down"
-  },
-  {
-    "time_ms": "68571.480000",
-    "eventName": "prep 1c fastest start"
-  },
-  {
-    "time_ms": "68857.194500",
     "eventName": "input up"
   },
   {
     "time_ms": "69142.909000",
-    "eventName": "prep 1c fastest finish"
-  },
-  {
-    "time_ms": "69142.909000",
-    "eventName": "input down"
-  },
-  {
-    "time_ms": "69142.909000",
-    "eventName": "prep 1c fastest start"
-  },
-  {
-    "time_ms": "69428.623500",
-    "eventName": "input up"
-  },
-  {
-    "time_ms": "69714.338000",
-    "eventName": "prep 1c fastest finish"
+    "eventName": "prep 4c finish"
   },
   {
     "time_ms": "69714.338000",
     "eventName": "input down"
   },
   {
-    "time_ms": "70857.196000",
-    "eventName": "prep 2c norm start"
+    "time_ms": "69857.195250",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "71375.053531",
+    "eventName": "prep 4c finish"
   },
   {
     "time_ms": "71428.625000",
@@ -445,14 +393,10 @@
   },
   {
     "time_ms": "72000.054000",
-    "eventName": "prep 2c norm finish"
-  },
-  {
-    "time_ms": "72000.054000",
     "eventName": "input down"
   },
   {
-    "time_ms": "73142.912000",
+    "time_ms": "72589.935395",
     "eventName": "prep 2c norm start"
   },
   {
@@ -460,7 +404,7 @@
     "eventName": "input up"
   },
   {
-    "time_ms": "74285.770000",
+    "time_ms": "73714.341000",
     "eventName": "prep 2c norm finish"
   },
   {
@@ -468,15 +412,15 @@
     "eventName": "input down"
   },
   {
-    "time_ms": "75428.628000",
+    "time_ms": "75388.747018",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "75447.080395",
     "eventName": "prep 2c fast start"
   },
   {
     "time_ms": "76000.057000",
-    "eventName": "input up"
-  },
-  {
-    "time_ms": "76571.486000",
     "eventName": "prep 2c fast finish"
   },
   {
@@ -484,7 +428,7 @@
     "eventName": "input down"
   },
   {
-    "time_ms": "76571.486000",
+    "time_ms": "76589.938395",
     "eventName": "prep 2c fast start"
   },
   {
@@ -492,7 +436,7 @@
     "eventName": "input up"
   },
   {
-    "time_ms": "77714.344000",
+    "time_ms": "77142.915000",
     "eventName": "prep 2c fast finish"
   },
   {
@@ -500,7 +444,7 @@
     "eventName": "input down"
   },
   {
-    "time_ms": "77714.344000",
+    "time_ms": "77769.105946",
     "eventName": "prep 2c norm start"
   },
   {
@@ -512,11 +456,11 @@
     "eventName": "prep 2c norm finish"
   },
   {
-    "time_ms": "78857.202000",
+    "time_ms": "79428.631000",
     "eventName": "input down"
   },
   {
-    "time_ms": "80000.060000",
+    "time_ms": "80018.512395",
     "eventName": "prep 2c norm start"
   },
   {
@@ -528,11 +472,11 @@
     "eventName": "prep 2c norm finish"
   },
   {
-    "time_ms": "81142.918000",
+    "time_ms": "81714.347000",
     "eventName": "input down"
   },
   {
-    "time_ms": "82285.776000",
+    "time_ms": "82304.228395",
     "eventName": "prep 2c norm start"
   },
   {
@@ -544,12 +488,16 @@
     "eventName": "prep 2c norm finish"
   },
   {
-    "time_ms": "83428.634000",
+    "time_ms": "84000.063000",
     "eventName": "input down"
   },
   {
-    "time_ms": "84571.492000",
+    "time_ms": "84589.944395",
     "eventName": "prep 2c fast start"
+  },
+  {
+    "time_ms": "85109.587642",
+    "eventName": "prep 2c fast finish"
   },
   {
     "time_ms": "85142.921000",
@@ -557,23 +505,19 @@
   },
   {
     "time_ms": "85714.350000",
-    "eventName": "prep 2c fast finish"
-  },
-  {
-    "time_ms": "85714.350000",
     "eventName": "input down"
   },
   {
-    "time_ms": "85714.350000",
+    "time_ms": "85774.469093",
     "eventName": "prep 2c fast start"
+  },
+  {
+    "time_ms": "86258.993266",
+    "eventName": "prep 2c fast finish"
   },
   {
     "time_ms": "86285.779000",
     "eventName": "input up"
-  },
-  {
-    "time_ms": "86857.208000",
-    "eventName": "prep 2c fast finish"
   },
   {
     "time_ms": "86857.208000",

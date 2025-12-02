@@ -82,4 +82,9 @@ public class SFXManager : MonoBehaviour
             Debug.LogWarning($"SFXManager: Índice {sfxIndex} fuera de rango. Revisa el array SFX.");
         }
     }
+
+    public void PlaySFXReference(EventReference reference)
+    {
+        RuntimeManager.PlayOneShot(reference);
+    }
 }

@@ -304,7 +304,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1665262363}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 3
@@ -719,7 +719,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1665262363}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
         m_MethodName: PlaySFXOneAtTime
         m_Mode: 3
@@ -806,6 +806,143 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267414577}
   m_CullTransparentMesh: 1
+--- !u!1 &407383396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 407383399}
+  - component: {fileID: 407383398}
+  - component: {fileID: 407383397}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &407383397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407383396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
+--- !u!114 &407383398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407383396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1650a813d7112e42a6fb87ebc61409f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SFX:
+  - Guid:
+      Data1: 236652072
+      Data2: 1278938417
+      Data3: 2078429619
+      Data4: 160432385
+    Path: event:/SFX/Footsteps
+  - Guid:
+      Data1: 938115727
+      Data2: 1179375706
+      Data3: -155224413
+      Data4: -35337168
+    Path: event:/SFX/ButtonHover
+  - Guid:
+      Data1: 1625606299
+      Data2: 1195885793
+      Data3: 674446990
+      Data4: -932085057
+    Path: event:/SFX/ButtonClick
+  - Guid:
+      Data1: 2006305962
+      Data2: 1273913856
+      Data3: 495265172
+      Data4: 566835665
+    Path: event:/SFX/Slider
+  - Guid:
+      Data1: -1763391651
+      Data2: 1124625082
+      Data3: -1711477846
+      Data4: -817919045
+    Path: event:/SFX/AcceptDialogue
+  - Guid:
+      Data1: -1288752565
+      Data2: 1161158460
+      Data3: 1691714746
+      Data4: -457422816
+    Path: event:/Barista/BaristaInputDown
+  - Guid:
+      Data1: 1984059399
+      Data2: 1323675551
+      Data3: -915082329
+      Data4: 900430492
+    Path: event:/Barista/BaristaPerfect
+  - Guid:
+      Data1: -890669734
+      Data2: 1105826501
+      Data3: 290775430
+      Data4: -85762274
+    Path: event:/Barista/BaristaMiss
+  - Guid:
+      Data1: 1370490327
+      Data2: 1314978700
+      Data3: 1770361233
+      Data4: -1375541427
+    Path: event:/Barista/BaristaPrepIn
+  - Guid:
+      Data1: 1068653792
+      Data2: 1211006383
+      Data3: 229993864
+      Data4: 2134875924
+    Path: event:/Barista/BaristaPrepOut
+--- !u!4 &407383399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407383396}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5340211, y: 3.3845909, z: -3.111356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423959683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1228,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1665262363}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
         m_MethodName: PlaySFXOneAtTime
         m_Mode: 3
@@ -1510,6 +1647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 998190265}
   - component: {fileID: 998190266}
+  - component: {fileID: 998190267}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -1561,6 +1699,24 @@ MonoBehaviour:
         Data3: -1494134397
         Data4: -1245384029
       Path: event:/Music/HubLoop
+--- !u!114 &998190267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998190263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 0
+  Banks:
+  - Desktop/Master
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &1042790847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,113 +2724,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1665262362
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1665262364}
-  - component: {fileID: 1665262363}
-  - component: {fileID: 1665262365}
-  m_Layer: 0
-  m_Name: SFXManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1665262363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665262362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1650a813d7112e42a6fb87ebc61409f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SFX:
-  - Guid:
-      Data1: 236652072
-      Data2: 1278938417
-      Data3: 2078429619
-      Data4: 160432385
-    Path: event:/SFX/Footsteps
-  - Guid:
-      Data1: 938115727
-      Data2: 1179375706
-      Data3: -155224413
-      Data4: -35337168
-    Path: event:/SFX/ButtonHover
-  - Guid:
-      Data1: 1625606299
-      Data2: 1195885793
-      Data3: 674446990
-      Data4: -932085057
-    Path: event:/SFX/ButtonClick
-  - Guid:
-      Data1: 2006305962
-      Data2: 1273913856
-      Data3: 495265172
-      Data4: 566835665
-    Path: event:/SFX/Slider
-  - Guid:
-      Data1: -1763391651
-      Data2: 1124625082
-      Data3: -1711477846
-      Data4: -817919045
-    Path: event:/SFX/AcceptDialogue
---- !u!4 &1665262364
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665262362}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5340211, y: 3.3845909, z: -3.111356}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1665262365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665262362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  Event: 
-  EventPlayTrigger: 1
-  EventStopTrigger: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
 --- !u!1 &1723520548
 GameObject:
   m_ObjectHideFlags: 0
@@ -3456,5 +3505,5 @@ SceneRoots:
   - {fileID: 232640127}
   - {fileID: 2084971893}
   - {fileID: 998190265}
-  - {fileID: 1665262364}
   - {fileID: 950866697}
+  - {fileID: 407383399}
