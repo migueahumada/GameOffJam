@@ -18,4 +18,9 @@ public class OneShotTrigger : MonoBehaviour
     {
         SFXManager.instance.PlaySFX(indexSFX);
     }
+
+    public void PlayOneAtOnce(int indexSFX)
+    {
+        SFXManager.instance.PlaySFXOneAtTime(indexSFX);
+    }
 }

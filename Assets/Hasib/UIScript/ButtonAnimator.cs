@@ -23,9 +23,6 @@ public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("OnPointerEnter");
-        Debug.Log("Current scale: " + transform.localScale);
-
         transform.DOScale(hoverScale, duration).SetEase(Ease.OutBack).SetUpdate(true)
             ;
         //notificacion sfx

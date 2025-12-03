@@ -103,7 +103,7 @@ public class AudioManager : MonoBehaviour
             PauseVal = 0f; 
             currentMusicInstance.setParameterByName("Paused", PauseVal);
             currentMusicInstance.start();
-            Debug.Log($"🎶 Reproduciendo música para la escena: **{sceneName}**");
+            //Debug.Log($"🎶 Reproduciendo música para la escena: **{sceneName}**");
         }
         else
         {

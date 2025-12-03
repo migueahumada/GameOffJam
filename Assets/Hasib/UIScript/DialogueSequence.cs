@@ -14,6 +14,16 @@ public class DialogueSequence : MonoBehaviour
 
     void Start()
     {
+        if (PlayerPrefs.GetString("welcome") == "true")
+        {
+            Debug.Log(PlayerPrefs.GetString("welcome"));
+            gameObject.SetActive(false);
+        }
+        else {
+            PlayerPrefs.SetString("welcome", "true");
+            gameObject.SetActive(true);
+        }
+
         panel = GetComponent<RectTransform>();
         if (images.Count > 0 && targetImage != null)
         {

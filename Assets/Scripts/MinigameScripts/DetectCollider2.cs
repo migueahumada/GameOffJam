@@ -8,7 +8,7 @@ namespace MinigameScripts
     public class DetectCollider2 : MonoBehaviour
     {
         private bool cupIn = false;
-        private bool isPouring = false;
+        //private bool isPouring = false;
         public CoffeeMachineController coffeeMachineController;
         
         public RhythmJudge rythmJudge;
@@ -35,7 +35,7 @@ namespace MinigameScripts
 
         private void HandleStartPour()
         {
-            isPouring = true;
+            //isPouring = true;
             objetivoAnimator?.SetBool("isPouring", true);
         }
         private void HandlePrepFinish()
@@ -49,7 +49,7 @@ namespace MinigameScripts
 
         private void HandleMiss()
         {
-            isPouring = false;
+            //isPouring = false;
             if (cupIn) 
             {
                 objetivoAnimator?.SetTrigger("Miss");

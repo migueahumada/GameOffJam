@@ -3,10 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class ButtonBack : MonoBehaviour
 {
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void BackToHub()
     {
         SceneManager.LoadScene(1);
+        Debug.Log("Back to hub");
     }
 
     public void BackToMain()

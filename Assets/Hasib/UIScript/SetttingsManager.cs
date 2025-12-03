@@ -42,7 +42,6 @@ public class SetttingsManager : MonoBehaviour
         PlayerPrefs.SetFloat(SFXSliderKey, currentSFXValue);
         PlayerPrefs.Save();  
         SFXManager.instance.sfxBus.setVolume(currentSFXValue);
-        Debug.Log("CSFX: "+currentSFXValue);
     }
 
     public void SetMusicValue()
@@ -50,6 +49,5 @@ public class SetttingsManager : MonoBehaviour
         currentMusicValue =Music.value;
         PlayerPrefs.SetFloat(MusicSliderKey, currentMusicValue);
         SFXManager.instance.musicBus.setVolume(currentMusicValue);
-        Debug.Log("CM: "+currentMusicValue);
     }
 }

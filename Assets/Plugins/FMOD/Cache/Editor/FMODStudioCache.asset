@@ -24,6 +24,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-8509467740137130367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Barista/BaristaPrepOut
+  m_EditorClassIdentifier: 
+  Path: event:/Barista/BaristaPrepOut
+  Guid:
+    Data1: 1068653792
+    Data2: 1211006383
+    Data3: 229993864
+    Data4: 2134875924
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7992142483136787564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +129,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6913708561777949822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Barista/BaristaInputDown
+  m_EditorClassIdentifier: 
+  Path: event:/Barista/BaristaInputDown
+  Guid:
+    Data1: -1288752565
+    Data2: 1161158460
+    Data3: 1691714746
+    Data4: -457422816
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6840258958802674469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Slider
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Slider
+  Guid:
+    Data1: 2006305962
+    Data2: 1273913856
+    Data3: 495265172
+    Data4: 566835665
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6789869592489704164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +237,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 119500
+--- !u!114 &-6696030385829459254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMODBanks/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639003627810765360
+  FileSizes:
+  - Name: 
+    Value: 1596
+  Exists: 1
 --- !u!114 &-6641735991225597511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,9 +355,36 @@ MonoBehaviour:
   Path: Assets/Audio/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639002757222388794
+  lastModified: 639003627013583580
   FileSizes: []
   Exists: 1
+--- !u!114 &-5982876100091490300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MainMenu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MainMenu
+  Guid:
+    Data1: 1426962343
+    Data2: 1221055394
+    Data3: -128621411
+    Data4: 1949688190
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 119500
 --- !u!114 &-5930764966873874918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +549,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 89333
+--- !u!114 &-3243537219887271692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HubLoop/Interior
+  m_EditorClassIdentifier: 
+  Name: Interior
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 2256019990
+    data2: 279856592
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3177415166795367599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/AcceptDialogue
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/AcceptDialogue
+  Guid:
+    Data1: -1763391651
+    Data2: 1124625082
+    Data3: -1711477846
+    Data4: -817919045
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2016943510149704730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +620,33 @@ MonoBehaviour:
     Data4: -85762274
   Banks:
   - {fileID: -6253520445437254718}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1967530049040776182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Barista/BaristaPrepIn
+  m_EditorClassIdentifier: 
+  Path: event:/Barista/BaristaPrepIn
+  Guid:
+    Data1: 1370490327
+    Data2: 1314978700
+    Data3: 1770361233
+    Data4: -1375541427
+  Banks:
+  - {fileID: 3755572271588357070}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -529,6 +735,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-142776615175625555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BaristaMinigame
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BaristaMinigame
+  Guid:
+    Data1: -1756239790
+    Data2: 1233586088
+    Data3: 653168807
+    Data4: -2108111351
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 96000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,30 +775,57 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 87942530079610030}
-  - {fileID: -6253520445437254718}
+  - {fileID: -6696030385829459254}
+  - {fileID: 3755572271588357070}
   EditorEvents:
-  - {fileID: 4786382495246021167}
-  - {fileID: -6317752565241231393}
-  - {fileID: 413969625836670647}
-  - {fileID: 4602646489107421589}
-  - {fileID: 2614115816073257719}
-  - {fileID: 3242111356794282069}
-  - {fileID: 2906893490115559178}
-  - {fileID: -2016943510149704730}
-  - {fileID: -6641735991225597511}
-  - {fileID: 1701721542491177441}
-  - {fileID: 1578781877614510303}
-  - {fileID: -512743245677109485}
-  - {fileID: 778732764381830885}
-  - {fileID: 3227848722265343450}
+  - {fileID: 986364976288106600}
+  - {fileID: 24328713644882935}
+  - {fileID: -6913708561777949822}
+  - {fileID: -142776615175625555}
+  - {fileID: 3197272092104653477}
+  - {fileID: -3177415166795367599}
+  - {fileID: 2575072285960518504}
+  - {fileID: 4214595066496135006}
+  - {fileID: 622403726280847125}
+  - {fileID: 611064576777412527}
+  - {fileID: -5982876100091490300}
+  - {fileID: -6840258958802674469}
+  - {fileID: -1967530049040776182}
+  - {fileID: -8509467740137130367}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -6253520445437254718}
+  - {fileID: 3755572271588357070}
   StringsBanks:
-  - {fileID: 87942530079610030}
-  cacheTime: 639002757222416773
+  - {fileID: -6696030385829459254}
+  cacheTime: 639003627810765360
   cacheVersion: 131633
+--- !u!114 &24328713644882935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Footsteps
+  Guid:
+    Data1: 236652072
+    Data2: 1278938417
+    Data3: 2078429619
+    Data4: 160432385
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &87942530079610030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +841,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639002757222416773
+  lastModified: 639003627013603894
   FileSizes:
   - Name: 
     Value: 1596
@@ -640,6 +900,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &611064576777412527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ButtonClick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ButtonClick
+  Guid:
+    Data1: 1625606299
+    Data2: 1195885793
+    Data3: 674446990
+    Data4: -932085057
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &622403726280847125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ButtonHover
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ButtonHover
+  Guid:
+    Data1: 938115727
+    Data2: 1179375706
+    Data3: -155224413
+    Data4: -35337168
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &778732764381830885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,6 +974,33 @@ MonoBehaviour:
     Data4: -1375541427
   Banks:
   - {fileID: -6253520445437254718}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &986364976288106600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Barista/BaristaPerfect
+  m_EditorClassIdentifier: 
+  Path: event:/Barista/BaristaPerfect
+  Guid:
+    Data1: 1984059399
+    Data2: 1323675551
+    Data3: -915082329
+    Data4: 900430492
+  Banks:
+  - {fileID: 3755572271588357070}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -739,6 +1080,35 @@ MonoBehaviour:
   lastModified: 639002075635194911
   FileSizes: []
   Exists: 1
+--- !u!114 &2575072285960518504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/HubLoop
+  m_EditorClassIdentifier: 
+  Path: event:/Music/HubLoop
+  Guid:
+    Data1: 1643380096
+    Data2: 1276706677
+    Data3: -1494134397
+    Data4: -1245384029
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3243537219887271692}
+  - {fileID: 2810616193251330067}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 89333
 --- !u!114 &2614115816073257719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,6 +1136,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2810616193251330067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HubLoop/Paused
+  m_EditorClassIdentifier: 
+  Name: Paused
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3586068054
+    data2: 3120000697
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2906893490115559178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,6 +1207,33 @@ MonoBehaviour:
     Data4: -35337168
   Banks:
   - {fileID: 2307710445542238806}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3197272092104653477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Barista/BaristaMiss
+  m_EditorClassIdentifier: 
+  Path: event:/Barista/BaristaMiss
+  Guid:
+    Data1: -890669734
+    Data2: 1105826501
+    Data3: 290775430
+    Data4: -85762274
+  Banks:
+  - {fileID: 3755572271588357070}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -874,6 +1295,51 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3755572271588357070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMODBanks/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639003627810740688
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4214595066496135006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/WaveOfClients
+  m_EditorClassIdentifier: 
+  Path: event:/Music/WaveOfClients
+  Guid:
+    Data1: -343291513
+    Data2: 1183871207
+    Data3: 2008190623
+    Data4: 1116934673
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 98769
 --- !u!114 &4602646489107421589
 MonoBehaviour:
   m_ObjectHideFlags: 0

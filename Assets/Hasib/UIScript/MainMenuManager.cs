@@ -22,5 +22,14 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene(level);
 
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
     
+    public void ErasePlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

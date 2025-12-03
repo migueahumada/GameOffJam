@@ -539,7 +539,7 @@ MonoBehaviour:
   sourceProjectPath: D:/07_FMOD/GameOffJam/GameOffJam.fspro
   sourceBankPath: Assets/Audio/FMODBanks/Desktop
   sourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0

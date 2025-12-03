@@ -28,7 +28,8 @@ namespace MinigameScripts
         public float WindowMs = 300f; // Window of 300ms (±150ms)
         public float InputOffsetMs = 0f; 
 
-        public GameObject _gameOver;
+        public GameObject _gameOverWin;
+        public GameObject _gameOverLoose;
 
         private List<RhythmPair> _rhythmPairs = new List<RhythmPair>();
         private int _currentPairIndex = 0;
@@ -223,9 +224,13 @@ namespace MinigameScripts
             Debug.Log($"Judge: Parsed {_totalPairs} pairs.");
         }
 
-        private void showGameOver()
+        private void showWin()
         {
-            Instantiate(_gameOver);
+            _gameOverWin.SetActive(true);
+        }
+        private void showLoose()
+        {
+            _gameOverLoose.SetActive(true);
         }
         private void AdvanceToNextPair()
         {
@@ -236,9 +241,8 @@ namespace MinigameScripts
             {
                 float score = _totalPairs > 0 ? ((float)_successfulPairs / _totalPairs) * 100f : 0;
                 Debug.Log($"🏁 GAME OVER! Score: {score:F1}%");
-                Invoke("showGameOver", 2);
-            
-                
+                if (score >= 60) Invoke("showWin", 2);
+                else Invoke("showLoose", 2);                
             }
         }
     }
