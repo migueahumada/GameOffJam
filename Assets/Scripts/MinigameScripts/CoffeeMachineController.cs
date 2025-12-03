@@ -5,17 +5,10 @@ namespace MinigameScripts
 {
     public class CoffeeMachineController : MonoBehaviour
     {
-        [Header("Pour Effect")]
-        [SerializeField] private GameObject _pourStream;
-        
-        [Header("FMOD Timeline")]
-        [SerializeField] private FMODEventTimeline _fmodTimeline;
-
-        [Header("Cups")]
         [SerializeField] private GameObject[] _cups;
 
+         private FMODEventTimeline _fmodTimeline;
         //private Boolean _isPouring;
-
         //animation triggers
         public static event Action OnPrepStart;
         public static event Action OnPrepFinish;
@@ -37,8 +30,6 @@ namespace MinigameScripts
         {
             if (_fmodTimeline == null)
                 _fmodTimeline = FindFirstObjectByType<FMODEventTimeline>();
-
-            if (_pourStream) _pourStream.SetActive(false);
         }
 
         private void HandleTimelineEvent(TimelineEvent evt)
@@ -83,9 +74,18 @@ namespace MinigameScripts
         private void HandleCupEntry(String eventName)
         {
             SFXManager.instance.PlaySFX(8);
-            if (eventName.Contains("2c norm")) Instantiate(_cups[1]); 
-            else if (eventName.Contains("2c fast")) Instantiate(_cups[2]);
-            else Instantiate(_cups[0]);
+            if (eventName.Contains("2c norm")) 
+            {    
+                GameObject sCupInstance = Instantiate(_cups[1]); 
+            }
+            else if (eventName.Contains("2c fast"))
+            {
+                GameObject xsCupInstance = Instantiate(_cups[2]);   
+            }
+            else
+            {
+                GameObject xsCupInstance = Instantiate(_cups[0]);    
+            } 
         }
 
         //-- private void StartPour()

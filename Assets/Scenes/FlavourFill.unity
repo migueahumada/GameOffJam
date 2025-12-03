@@ -355,8 +355,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12f46e780c4fb948b2822b9adf274d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pourStream: {fileID: 0}
-  _fmodTimeline: {fileID: 2102208640}
   _cups:
   - {fileID: 39827930090432136, guid: b0555affd84e6e94d9e3391fb6da7de4, type: 3}
   - {fileID: 6793266332299781117, guid: 1585df786604fb049b75a1e29d7b1058, type: 3}
@@ -778,6 +776,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &766859720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766859722}
+  - component: {fileID: 766859721}
+  m_Layer: 0
+  m_Name: MinigameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &766859721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766859720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd0f2757474f0445a2243792a50ba1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timelineObject: {fileID: 19753309932850132, guid: af8582b589b47de4e9417146684c2676, type: 3}
+  rythmJudge: {fileID: 4788864770049701410, guid: de2ea92cbc323774d9dcf14e20021c5f, type: 3}
+  musicEvent:
+    Guid:
+      Data1: -1756239790
+      Data2: 1233586088
+      Data3: 653168807
+      Data4: -2108111351
+    Path: event:/Music/BaristaMinigame
+  tutorialEvent:
+    Guid:
+      Data1: -343291513
+      Data2: 1183871207
+      Data3: 2008190623
+      Data4: 1116934673
+    Path: event:/Music/WaveOfClients
+  musicJSON: {fileID: 4900000, guid: 5a7b3f77d51c6d5409d6da87bf5e0c30, type: 3}
+  tutorialJSON: {fileID: 4900000, guid: b9727ad80bd83724d94261a686357df7, type: 3}
+--- !u!4 &766859722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766859720}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &808828336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -790,6 +850,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3054333650319058171, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
+      propertyPath: m_TagString
+      value: GameOverLoose
+      objectReference: {fileID: 0}
     - target: {fileID: 3230303237826548131, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -801,6 +865,10 @@ PrefabInstance:
     - target: {fileID: 4011778866170388443, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4011778866170388443, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
+      propertyPath: m_TagString
+      value: GameOverWin
       objectReference: {fileID: 0}
     - target: {fileID: 6059984429359447285, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
       propertyPath: m_Pivot.x
@@ -911,11 +979,6 @@ PrefabInstance:
       addedObject: {fileID: 100333556}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
---- !u!1 &808828337 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3054333650319058171, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
-  m_PrefabInstance: {fileID: 808828336}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &808828340 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6504024409932727693, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
@@ -988,7 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coffeeMachineController: {fileID: 228926383}
-  rythmJudge: {fileID: 1494432469}
+  rythmJudge: {fileID: 0}
   objetivoAnimator: {fileID: 0}
   selfCup: {fileID: 0}
 --- !u!1 &970410433
@@ -1058,7 +1121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coffeeMachineController: {fileID: 228926383}
-  objetivoAnimator: {fileID: 0}
 --- !u!224 &989421894 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6059984429359447285, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
@@ -1075,7 +1137,7 @@ GameObject:
   - component: {fileID: 1090491537}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1389,62 +1451,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1494432468
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1494432470}
-  - component: {fileID: 1494432469}
-  m_Layer: 0
-  m_Name: '[RythmJudge]'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1494432469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494432468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5b252afb65dde649b75fbd5f17acba7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _armAnimator: {fileID: 1721896531}
-  _machineAnimator: {fileID: 1978598168}
-  _timeline: {fileID: 2102208640}
-  WindowMs: 300
-  InputOffsetMs: -50
-  _gameOverWin: {fileID: 1648461965}
-  _gameOverLoose: {fileID: 808828337}
---- !u!4 &1494432470
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494432468}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1648461965 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4011778866170388443, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
-  m_PrefabInstance: {fileID: 808828336}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1721896530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6368584758456073742, guid: bd496d9e36df05c409bcf0c82bc7b7e6, type: 3}
@@ -1553,6 +1559,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5911ad65a6adeaa469371ebb303cdd93, type: 3}
+      propertyPath: m_TagString
+      value: Machine
+      objectReference: {fileID: 0}
     - target: {fileID: 5917893844142046307, guid: 5911ad65a6adeaa469371ebb303cdd93, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1604,59 +1614,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &2102208637
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2102208639}
-  - component: {fileID: 2102208640}
-  m_Layer: 0
-  m_Name: TimelineManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2102208639
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102208637}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2958398, y: 2.7625294, z: 0.012045309}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2102208640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102208637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27cf5df899efbf943ab333dd550d4951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fmodMusic:
-    Guid:
-      Data1: -1756239790
-      Data2: 1233586088
-      Data3: 653168807
-      Data4: -2108111351
-    Path: event:/Music/BaristaMinigame
-  jsonFile: {fileID: 4900000, guid: 5a7b3f77d51c6d5409d6da87bf5e0c30, type: 3}
-  autoStart: 1
 --- !u!1 &60961251005992900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,14 +1828,13 @@ SceneRoots:
   - {fileID: 1163249835}
   - {fileID: 260585647}
   - {fileID: 691220424}
-  - {fileID: 2102208639}
   - {fileID: 451198963}
   - {fileID: 1115592187}
   - {fileID: 834084314625267070}
   - {fileID: 1090491537}
   - {fileID: 228926384}
-  - {fileID: 1494432470}
   - {fileID: 970410436}
   - {fileID: 937552944}
   - {fileID: 678287999}
   - {fileID: 1978598166}
+  - {fileID: 766859722}

@@ -4,10 +4,13 @@ public class Manager : MonoBehaviour
 {
     bool isPaused = false;
     [SerializeField] GameObject pauseMenu;
+
+    public GameObject dialogueObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Time.timeScale = 1;
+        dialogueObject.SetActive(true);
     }
 
     // Update is called once per frame

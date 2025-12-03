@@ -18,18 +18,20 @@ namespace MinigameScripts
 
 
         [Header("Visuals")] 
-        [SerializeField] private Animator _armAnimator;
-        [SerializeField] private Animator _machineAnimator;
+        //[SerializeField] private Animator _armAnimator;
+        public Animator _armAnimator;
+        //[SerializeField] private Animator _machineAnimator;
+        public Animator _machineAnimator;
 
         [Header("Timeline Reference")]
-        [SerializeField] private FMODEventTimeline _timeline;
+        [SerializeField] public FMODEventTimeline _timeline;
 
         [Header("Scoring Settings")]
         public float WindowMs = 300f; // Window of 300ms (±150ms)
         public float InputOffsetMs = 0f; 
 
-        public GameObject _gameOverWin;
-        public GameObject _gameOverLoose;
+        private GameObject _gameOverWin;
+        private GameObject _gameOverLoose;
 
         private List<RhythmPair> _rhythmPairs = new List<RhythmPair>();
         private int _currentPairIndex = 0;
@@ -46,6 +48,14 @@ namespace MinigameScripts
 
         private void Start()
         {
+            while(_timeline == null)
+            {
+                _timeline = FindFirstObjectByType<FMODEventTimeline>();
+            }
+            _armAnimator = GameObject.FindGameObjectWithTag("Arm").GetComponentInChildren<Animator>();
+            _machineAnimator = GameObject.FindGameObjectWithTag("Machine").GetComponent<Animator>();
+            _gameOverWin = GameObject.FindGameObjectWithTag("GameOverWin");
+            _gameOverLoose = GameObject.FindGameObjectWithTag("GameOverLoose");
             // Initial parse
             ParseTimeline();
         }

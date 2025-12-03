@@ -11,7 +11,7 @@ namespace MinigameScripts
 
 
         // Almacenamos el componente Animator para poder usarlo después.
-        public Animator objetivoAnimator;
+        private Animator objetivoAnimator;
 
         private void OnEnable()
         {

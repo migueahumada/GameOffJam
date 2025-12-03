@@ -14,6 +14,7 @@ public class DialogueSequence : MonoBehaviour
 
     void Start()
     {
+        Debug.Log($"PlayerPrefs content:  {PlayerPrefs.GetString("welcome")}");
         if (PlayerPrefs.GetString("welcome") == "true")
         {
             Debug.Log(PlayerPrefs.GetString("welcome"));

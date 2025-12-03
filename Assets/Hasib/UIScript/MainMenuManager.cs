@@ -31,5 +31,6 @@ public class MainMenuManager : MonoBehaviour
     public void ErasePlayerPrefs()
     {
         PlayerPrefs.DeleteAll();
+        Debug.Log("playerprefs deleted");
     }
 }

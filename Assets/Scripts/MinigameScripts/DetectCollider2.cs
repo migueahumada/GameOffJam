@@ -19,6 +19,14 @@ namespace MinigameScripts
         public Animator objetivoAnimator;
         public GameObject selfCup;
 
+        void Start()
+        {
+            while(rythmJudge == null)
+            {
+                rythmJudge = FindAnyObjectByType<RhythmJudge>();
+            }
+        }
+
         private void OnEnable()
         {
             CoffeeMachineController.OnPrepFinish += HandlePrepFinish;

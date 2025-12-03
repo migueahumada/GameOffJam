@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Arm
+  - Machine
+  - GameOverWin
+  - GameOverLoose
   layers:
   - Default
   - TransparentFX
