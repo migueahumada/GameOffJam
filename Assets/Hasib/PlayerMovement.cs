@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
    // [SerializeField] private float rotationSpeed = 360;
     [SerializeField] Animator _animator;
+    
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();

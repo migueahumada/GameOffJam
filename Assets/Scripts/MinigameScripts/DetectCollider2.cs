@@ -21,10 +21,12 @@ namespace MinigameScripts
 
         void Start()
         {
-            while(rythmJudge == null)
-            {
-                rythmJudge = FindAnyObjectByType<RhythmJudge>();
-            }
+
+        }
+
+        private void HandleCreated()
+        {
+            rythmJudge = FindAnyObjectByType<RhythmJudge>();
         }
 
         private void OnEnable()
@@ -32,6 +34,7 @@ namespace MinigameScripts
             CoffeeMachineController.OnPrepFinish += HandlePrepFinish;
             RhythmJudge.OnStartPour += HandleStartPour;
             RhythmJudge.OnMiss += HandleMiss;
+            RhythmJudge.OnJudgeCreated += HandleCreated;
         }
 
         private void OnDisable()
@@ -39,6 +42,7 @@ namespace MinigameScripts
             CoffeeMachineController.OnPrepFinish -= HandlePrepFinish;
             RhythmJudge.OnMiss -= HandleMiss;
             RhythmJudge.OnStartPour -= HandleStartPour;
+            RhythmJudge.OnJudgeCreated -= HandleCreated;
         }
 
         private void HandleStartPour()

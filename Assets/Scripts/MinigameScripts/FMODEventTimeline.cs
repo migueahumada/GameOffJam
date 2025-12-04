@@ -53,12 +53,14 @@ public class FMODEventTimeline : MonoBehaviour
     {
         RhythmJudge.OnPause += HandleOnPause;
     }
-    private void Oisable()
+    private void OnDisable()
     {
         RhythmJudge.OnPause -= HandleOnPause;
     }
-    private void Awake()
+    public void InitializeTimeline()
     {
+        // AHORA ESTO ES PUBLICO y se llama después de asignar 'jsonFile'
+
         if (jsonFile == null)
         {
             Debug.LogError("❌ FMODEventTimeline: No JSON file assigned!");
@@ -66,21 +68,20 @@ public class FMODEventTimeline : MonoBehaviour
         }
 
         // Fix JSON array format manually
-        String wrappedJson = "{\"events\":" + jsonFile.text + "}";
-        
+        string wrappedJson = "{\"events\":" + jsonFile.text + "}";
+
         try 
         {
             TimelineEventWrapper wrapper = JsonUtility.FromJson<TimelineEventWrapper>(wrappedJson);
             _timelineEvents = wrapper.events ?? new List<TimelineEvent>();
-            
+
             // Sort by the converted float time
             _timelineEvents.Sort((a, b) => a.GetTimeMs().CompareTo(b.GetTimeMs()));
 
-            // Debug verification
             if (_timelineEvents.Count > 0)
             {
                 Debug.Log($"✅ Loaded {_timelineEvents.Count} events.");
-                Debug.Log($"👀 First Event: '{_timelineEvents[0].eventName}' at {_timelineEvents[0].GetTimeMs()}ms");
+                // ... logs
             }
         }
         catch (Exception e)

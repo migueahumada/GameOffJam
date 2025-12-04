@@ -29,9 +29,11 @@ namespace MinigameScripts
         [Header("Scoring Settings")]
         public float WindowMs = 300f; // Window of 300ms (±150ms)
         public float InputOffsetMs = 0f; 
+        public static event Action OnGameOverWin;
+        public static event Action OnGameOverLoose;
 
-        private GameObject _gameOverWin;
-        private GameObject _gameOverLoose;
+        //private GameObject _gameOverWin;
+        //private GameObject _gameOverLoose;
 
         private List<RhythmPair> _rhythmPairs = new List<RhythmPair>();
         private int _currentPairIndex = 0;
@@ -43,19 +45,22 @@ namespace MinigameScripts
         public static event Action OnMiss;
         public static event Action OnStartPour;
         public static event Action OnPause;
+        public static event Action OnJudgeCreated;
 
         private static readonly int Pressed = Animator.StringToHash("Pressed");
 
         private void Start()
         {
+            OnJudgeCreated?.Invoke();
             while(_timeline == null)
             {
                 _timeline = FindFirstObjectByType<FMODEventTimeline>();
             }
             _armAnimator = GameObject.FindGameObjectWithTag("Arm").GetComponentInChildren<Animator>();
             _machineAnimator = GameObject.FindGameObjectWithTag("Machine").GetComponent<Animator>();
-            _gameOverWin = GameObject.FindGameObjectWithTag("GameOverWin");
-            _gameOverLoose = GameObject.FindGameObjectWithTag("GameOverLoose");
+            
+            //_gameOverWin = GameObject.FindGameObjectWithTag("GameOverWin");
+            //_gameOverLoose = GameObject.FindGameObjectWithTag("GameOverLoose");
             // Initial parse
             ParseTimeline();
         }
@@ -75,6 +80,7 @@ namespace MinigameScripts
             // --- Visuals Only ---
             if (keyboard.spaceKey.wasPressedThisFrame) 
             {
+                //cambiar logica por eventos
                 _armAnimator.SetBool(Pressed, true);
                 _machineAnimator.SetBool(Pressed, true);
             }
@@ -234,14 +240,7 @@ namespace MinigameScripts
             Debug.Log($"Judge: Parsed {_totalPairs} pairs.");
         }
 
-        private void showWin()
-        {
-            _gameOverWin.SetActive(true);
-        }
-        private void showLoose()
-        {
-            _gameOverLoose.SetActive(true);
-        }
+
         private void AdvanceToNextPair()
         {
             _currentPairIndex++;
@@ -251,8 +250,11 @@ namespace MinigameScripts
             {
                 float score = _totalPairs > 0 ? ((float)_successfulPairs / _totalPairs) * 100f : 0;
                 Debug.Log($"🏁 GAME OVER! Score: {score:F1}%");
-                if (score >= 60) Invoke("showWin", 2);
-                else Invoke("showLoose", 2);                
+                if (score >= 65) OnGameOverWin?.Invoke();
+                else OnGameOverLoose?.Invoke();
+                
+                //if (score >= 60) Invoke("showWin", 2);
+                //else Invoke("showLoose", 2);                
             }
         }
     }

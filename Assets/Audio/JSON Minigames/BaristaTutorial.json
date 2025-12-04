@@ -1,0 +1,130 @@
+[
+  {
+    "time_ms": "4589.884395",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "6285.719000",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "6857.148000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "8571.435000",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "13732.748395",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "15428.583000",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "16000.012000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "17714.299000",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "23447.041395",
+    "eventName": "prep 2c norm start"
+  },
+  {
+    "time_ms": "24571.447000",
+    "eventName": "prep 2c norm finish"
+  },
+  {
+    "time_ms": "25142.876000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "26285.734000",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "32589.905395",
+    "eventName": "prep 2c norm start"
+  },
+  {
+    "time_ms": "33714.311000",
+    "eventName": "prep 2c norm finish"
+  },
+  {
+    "time_ms": "34285.740000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "35428.598000",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "41161.340395",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "42857.175000",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "43430.984954",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "44018.485395",
+    "eventName": "prep 2c norm start"
+  },
+  {
+    "time_ms": "45142.891000",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "45142.891000",
+    "eventName": "prep 2c norm finish"
+  },
+  {
+    "time_ms": "45732.772395",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "46857.178000",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "50304.204395",
+    "eventName": "prep 4c start"
+  },
+  {
+    "time_ms": "52000.039000",
+    "eventName": "prep 4c finish"
+  },
+  {
+    "time_ms": "52573.848954",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "53161.349395",
+    "eventName": "prep 2c norm start"
+  },
+  {
+    "time_ms": "54285.755000",
+    "eventName": "input up"
+  },
+  {
+    "time_ms": "54285.755000",
+    "eventName": "prep 2c norm finish"
+  },
+  {
+    "time_ms": "54857.184000",
+    "eventName": "input down"
+  },
+  {
+    "time_ms": "55981.589605",
+    "eventName": "input up"
+  }
+]

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2010512580660301577}
   m_Layer: 0
   m_Name: TimelineManager
-  m_TagString: Untagged
+  m_TagString: Timeline
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,10 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodMusic:
     Guid:
-      Data1: -1756239790
-      Data2: 1233586088
-      Data3: 653168807
-      Data4: -2108111351
-    Path: event:/Music/BaristaMinigame
-  jsonFile: {fileID: 4900000, guid: 5a7b3f77d51c6d5409d6da87bf5e0c30, type: 3}
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  jsonFile: {fileID: 0}
   autoStart: 1

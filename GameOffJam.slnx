@@ -24,10 +24,10 @@
   <Project Path="Autodesk.Fbx.csproj" />
   <Project Path="Unity.Burst.CodeGen.csproj" />
   <Project Path="Unity.Cinemachine.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.VisualScripting.Flow.csproj" />
   <Project Path="Unity.Splines.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.Formats.Alembic.Runtime.csproj" />
   <Project Path="Unity.Sequences.Editor.csproj" />
   <Project Path="Unity.Sequences.csproj" />

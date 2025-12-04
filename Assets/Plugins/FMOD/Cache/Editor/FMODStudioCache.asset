@@ -252,10 +252,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639003627810765360
+  lastModified: 639004483926001326
   FileSizes:
   - Name: 
-    Value: 1596
+    Value: 1694
   Exists: 1
 --- !u!114 &-6641735991225597511
 MonoBehaviour:
@@ -792,12 +792,14 @@ MonoBehaviour:
   - {fileID: -6840258958802674469}
   - {fileID: -1967530049040776182}
   - {fileID: -8509467740137130367}
+  - {fileID: 4078292858306031550}
+  - {fileID: 7906232609005371679}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3755572271588357070}
   StringsBanks:
   - {fileID: -6696030385829459254}
-  cacheTime: 639003627810765360
+  cacheTime: 639004483926001326
   cacheVersion: 131633
 --- !u!114 &24328713644882935
 MonoBehaviour:
@@ -1310,9 +1312,36 @@ MonoBehaviour:
   Path: Assets/Audio/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639003627810740688
+  lastModified: 639004483925985854
   FileSizes: []
   Exists: 1
+--- !u!114 &4078292858306031550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BaristaTutorialMinigame
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BaristaTutorialMinigame
+  Guid:
+    Data1: 1499338590
+    Data2: 1209190046
+    Data3: 2058191265
+    Data4: -931214423
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 56000
 --- !u!114 &4214595066496135006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1462,3 +1491,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7906232609005371679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BaristaCaratula
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BaristaCaratula
+  Guid:
+    Data1: -415963924
+    Data2: 1322525496
+    Data3: -2120589162
+    Data4: -1465212134
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

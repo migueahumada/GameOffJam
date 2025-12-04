@@ -8,6 +8,9 @@ TagManager:
   - Machine
   - GameOverWin
   - GameOverLoose
+  - Timeline
+  - RythmJudge
+  - Button
   layers:
   - Default
   - TransparentFX
