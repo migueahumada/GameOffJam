@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using FMODUnity;
 using MinigameScripts;
 using UnityEngine;
@@ -16,17 +17,31 @@ public class MinigameManager : MonoBehaviour
     public TextAsset musicJSON;
     public TextAsset tutorialJSON;
 
+    [Header("Background on GameOver")] 
     [SerializeField] private GameObject _backgroundWin;
     [SerializeField] private GameObject _backgroundLoose;
+
+    [Header("Caratulas")] 
     [SerializeField] private GameObject _caratula;
     [SerializeField] private EventReference _caratulaMusical;
+
+    [Header("Skip Button")] 
     [SerializeField] private GameObject skipButton;
+
+    [Header("Dialogues")]
+    [SerializeField] private GameObject[] _dialogues;
+    private int dialogIndex;
+    private bool isIntroductionActive = false;
 
     private int stageIndex;
     private bool victory = false;
 
     private GameObject minigameObject;
     private GameObject tutorialObject;
+
+    public static event Action OnPause;
+    public static event Action OnInputDown;
+    public static event Action OnInputUp;
 
 
     //private bool passTutorial = false;
@@ -71,11 +86,12 @@ public class MinigameManager : MonoBehaviour
                 ShowIntroduction();
                 break;
             case 1:
-                Invoke("StartTutorial", 2);
+                DestroyLevel();
+                StartTutorial();
                 break;
             case 2: 
                 Invoke("DestroyLevel",1);
-                Invoke("StartMinigame", 0.5f);
+                Invoke("StartMinigame", 2);
                 break;
             case 3:
                 Invoke("DestroyLevel",2);
@@ -87,8 +103,10 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
+
     private void ShowGameOverScene()
     {
+        Debug.Log("SHOW GAME OVER");
         if (victory) _backgroundWin.SetActive(true);
         else _backgroundWin.SetActive(true);
         NextStage(true);
@@ -101,22 +119,54 @@ public class MinigameManager : MonoBehaviour
 
     private void ShowIntroduction()
     {
+        Debug.Log("SHOW INTRODUCTION");
         _caratula.SetActive(true);
+        _caratula.GetComponent<Animator>().SetTrigger("Start");
         RuntimeManager.PlayOneShot(_caratulaMusical);
-        Debug.Log("hola tienes que pulsar el teclado para ganar");
-        NextStage(true);
+        //show the dialogues
+        isIntroductionActive = true;
+        dialogIndex = 0;
+        if (_dialogues.Length == 0) NextStage(true);
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        if (_dialogues != null && _dialogues.Length > 0)
+        {
+            _dialogues[dialogIndex].SetActive(true);
+        }
+    }
+
+    private void AdvanceDialogue()
+    {
+        SFXManager.instance.PlaySFX(2);
+        dialogIndex++;
+        _dialogues[dialogIndex-1].SetActive(false);
+        if (dialogIndex < _dialogues.Length) UpdateUI();
+        else
+        {
+            isIntroductionActive = false;
+            NextStage(true);
+        }
     }
 
     private void DestroyLevel()
     {
-        Destroy(GameObject.FindGameObjectWithTag("Timeline"));
-        Destroy(GameObject.FindGameObjectWithTag("RythmJudge"));
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Timeline").Length; ++i)
+        {
+            Destroy(GameObject.FindGameObjectsWithTag("Timeline")[i]);
+        }
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("RythmJudge").Length; ++i)
+        {
+            Destroy(GameObject.FindGameObjectsWithTag("RythmJudge")[i]);
+        }
     }
+    
 
     private void StartTutorial()
     {
-        _caratula.GetComponent<Animator>().SetTrigger("Start");
-        //_caratula.SetActive(false);
+        Debug.Log("START TUTORIAL");
         skipButton.SetActive(true);
         //set and instanciate the tutorial object
         tutorialObject = Instantiate(timelineObject);
@@ -129,13 +179,14 @@ public class MinigameManager : MonoBehaviour
         timelineScript.InitializeTimeline();
         Debug.Log($"Tutorial music is: {tutorialObject.GetComponent<FMODEventTimeline>().fmodMusic}");
         //tutorialObject.GetComponent<FMODEventTimeline>().jsonFile = tutorialJSON;
-
-        // iniciar tutorial con settings de cancion
         GameObject judgeInstanceTuto = Instantiate(rythmJudge);
         judgeInstanceTuto.GetComponent<RhythmJudge>()._timeline = tutorialObject.GetComponent<FMODEventTimeline>();
+
+        // iniciar tutorial con settings de cancion
     }
     private void StartMinigame()
     {
+        Debug.Log("START MINIGAME");
         skipButton.SetActive(false);
         //set and instanciate the minigame object
         minigameObject = Instantiate(timelineObject);
@@ -156,6 +207,30 @@ public class MinigameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // INPUTS OF THE PLAYER 
+        if (isIntroductionActive)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && dialogIndex < _dialogues.Length)
+            {
+                AdvanceDialogue();
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Space)) 
+            {
+                //cambiar logica por eventos
+                OnInputDown?.Invoke();
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                OnInputUp?.Invoke();
+            }    
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            OnPause?.Invoke();
+        }
+
     }
 }

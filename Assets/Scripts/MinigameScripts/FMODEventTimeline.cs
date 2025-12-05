@@ -51,11 +51,11 @@ public class FMODEventTimeline : MonoBehaviour
 
     private void OnEnable()
     {
-        RhythmJudge.OnPause += HandleOnPause;
+        MinigameManager.OnPause += HandleOnPause;
     }
     private void OnDisable()
     {
-        RhythmJudge.OnPause -= HandleOnPause;
+        MinigameManager.OnPause -= HandleOnPause;
     }
     public void InitializeTimeline()
     {

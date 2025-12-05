@@ -16,13 +16,6 @@ namespace MinigameScripts
             public bool Processed;
         }
 
-
-        [Header("Visuals")] 
-        //[SerializeField] private Animator _armAnimator;
-        public Animator _armAnimator;
-        //[SerializeField] private Animator _machineAnimator;
-        public Animator _machineAnimator;
-
         [Header("Timeline Reference")]
         [SerializeField] public FMODEventTimeline _timeline;
 
@@ -40,14 +33,10 @@ namespace MinigameScripts
         private bool _isHoldingCorrectly = false;
         private int _successfulPairs = 0;
         private int _totalPairs = 0;
-        private bool pauseMenu = false;
 
         public static event Action OnMiss;
         public static event Action OnStartPour;
-        public static event Action OnPause;
         public static event Action OnJudgeCreated;
-
-        private static readonly int Pressed = Animator.StringToHash("Pressed");
 
         private void Start()
         {
@@ -56,8 +45,6 @@ namespace MinigameScripts
             {
                 _timeline = FindFirstObjectByType<FMODEventTimeline>();
             }
-            _armAnimator = GameObject.FindGameObjectWithTag("Arm").GetComponentInChildren<Animator>();
-            _machineAnimator = GameObject.FindGameObjectWithTag("Machine").GetComponent<Animator>();
             
             //_gameOverWin = GameObject.FindGameObjectWithTag("GameOverWin");
             //_gameOverLoose = GameObject.FindGameObjectWithTag("GameOverLoose");
@@ -69,26 +56,6 @@ namespace MinigameScripts
         {
             var keyboard = Keyboard.current;
             if (keyboard == null) return;
-            // -- Menu Pausa
-            if (keyboard.escapeKey.wasPressedThisFrame) 
-            {
-                OnPause?.Invoke();
-                if (pauseMenu) _armAnimator.enabled = false;
-                else _armAnimator.enabled = true;
-                pauseMenu = !pauseMenu;
-            }
-            // --- Visuals Only ---
-            if (keyboard.spaceKey.wasPressedThisFrame) 
-            {
-                //cambiar logica por eventos
-                _armAnimator.SetBool(Pressed, true);
-                _machineAnimator.SetBool(Pressed, true);
-            }
-            if (keyboard.spaceKey.wasReleasedThisFrame)
-            {
-                _armAnimator.SetBool(Pressed, false);
-                _machineAnimator.SetBool(Pressed, false);
-            }    
 
             // --- Logic Safety Checks ---
             if (_rhythmPairs.Count == 0 || _currentPairIndex >= _rhythmPairs.Count) return;
@@ -101,12 +68,9 @@ namespace MinigameScripts
             if (!_isHoldingCorrectly && currentTimeMs > currentPair.StartTimeMs + (WindowMs / 2f))
             {
                  Debug.Log($"❌ Missed Note {_currentPairIndex} (Too Slow!)");
-                 _armAnimator.SetTrigger("Miss");
                  // miss notification
                  OnMiss?.Invoke();
                  SFXManager.instance.PlaySFX(7);
-                 _armAnimator.SetBool(Pressed, false);
-                 _machineAnimator.SetBool(Pressed, false);
                  currentPair.Processed = true; // Mark as done so we don't double count
                  AdvanceToNextPair();
                  return;
@@ -116,12 +80,9 @@ namespace MinigameScripts
             if (_isHoldingCorrectly && currentTimeMs > currentPair.EndTimeMs + (WindowMs / 2f))
             {
                  Debug.Log($"❌ Held too long! {_currentPairIndex}");
-                 _armAnimator.SetTrigger("Miss");
                  // miss notification
                  OnMiss?.Invoke();
                  SFXManager.instance.PlaySFX(7);
-                 _armAnimator.SetBool(Pressed, false);
-                 _machineAnimator.SetBool(Pressed, false);
                  currentPair.Processed = true;
                  AdvanceToNextPair();
                  return;
@@ -150,11 +111,8 @@ namespace MinigameScripts
                         // Negative diff means we are EARLY (Time < StartTime)
                         Debug.Log($"⚠️ Too Early! Wait! (Early by {Mathf.Abs(diff):F0}ms)");
                         SFXManager.instance.PlaySFX(7);
-                        _armAnimator.SetTrigger("Miss");
                         // miss notification
                         OnMiss?.Invoke();
-                        _armAnimator.SetBool(Pressed, false);
-                        _machineAnimator.SetBool(Pressed, false);
                         // DO NOT ADVANCE! Let the player try again or wait for the note.
                     }
                     else
@@ -162,11 +120,8 @@ namespace MinigameScripts
                         // Positive diff means we are LATE (Time > StartTime)
                         Debug.Log($"❌ Too Late! (Late by {diff:F0}ms)");
                         SFXManager.instance.PlaySFX(7);
-                        _armAnimator.SetTrigger("Miss");
                         // miss notification
                         OnMiss?.Invoke();
-                        _armAnimator.SetBool(Pressed, false);
-                        _machineAnimator.SetBool(Pressed, false);
                         // If we are late, we missed it. Skip to next.
                         AdvanceToNextPair();
                     }
@@ -190,11 +145,8 @@ namespace MinigameScripts
                     {
                         Debug.Log($"❌ Released Badly (Diff: {diff:F0}ms)");
                         SFXManager.instance.PlaySFX(7);
-                        _armAnimator.SetTrigger("Miss");
                         // miss notification
                         OnMiss?.Invoke();
-                        _armAnimator.SetBool(Pressed, false);
-                        _machineAnimator.SetBool(Pressed, false);
                     }
                     
                     // Whether good or bad release, this note is done.
