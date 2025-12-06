@@ -80,7 +80,7 @@ public class SFXManager : MonoBehaviour
         else
         {
             Debug.LogWarning($"SFXManager: Índice {sfxIndex} fuera de rango. Revisa el array SFX.");
-        }
+        } 
     }
 
     public void PlaySFXReference(EventReference reference)

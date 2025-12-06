@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XS Cup
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: db702a0a3b509124fb1c93e6d7a76acc, type: 3}
+      propertyPath: m_TagString
+      value: Cup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

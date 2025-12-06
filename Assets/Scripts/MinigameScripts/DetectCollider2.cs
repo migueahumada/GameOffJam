@@ -12,17 +12,10 @@ namespace MinigameScripts
         public CoffeeMachineController coffeeMachineController;
         
         public RhythmJudge rythmJudge;
-        
-
 
         // Almacenamos el componente Animator para poder usarlo después.
         public Animator objetivoAnimator;
         public GameObject selfCup;
-
-        void Start()
-        {
-
-        }
 
         private void HandleCreated()
         {
@@ -61,30 +54,29 @@ namespace MinigameScripts
 
         private void HandleMiss()
         {
-            //isPouring = false;
-            if (cupIn) 
+            if (cupIn && objetivoAnimator != null && objetivoAnimator.isActiveAndEnabled)
             {
-                objetivoAnimator?.SetTrigger("Miss");
-                //objetivoAnimator?.SetBool("isPouring", false);
+                objetivoAnimator.SetTrigger("Miss");
+            }
+            else
+            {
+                Debug.LogWarning("HandleMiss: No hay Animator válido para disparar la animación.");
             }
         }
 
         
         private void OnTriggerEnter(Collider other)
         {
-            // 1. Intentamos obtener el componente Animator del objeto que entró.
-            if (other.gameObject.name == "coffee_M")
+            if (other.gameObject.tag == "Cup")
             {
-                selfCup = other.gameObject.transform.parent.gameObject;
-                objetivoAnimator = other.transform.GetComponentInParent<Animator>();
+                // Intentamos obtener el Animator en el objeto
+                if (!other.gameObject.TryGetComponent<Animator>(out objetivoAnimator))
+                {
+                    // Si falla (devuelve false), buscamos en el padre (error de maquetado en el juego un poco chapuza)
+                    objetivoAnimator = other.gameObject.GetComponentInParent<Animator>();
+                }
+                cupIn = true;
             }
-            else if (other.gameObject.name == "S Cup(Clone)" || other.gameObject.name == "XS Cup(Clone)")
-            {
-                selfCup = other.gameObject;
-                objetivoAnimator = other.GetComponent<Animator>();
-            }
-
-            if (objetivoAnimator != null) cupIn = true;
         }
         
         private void OnTriggerExit(Collider other)
@@ -94,7 +86,6 @@ namespace MinigameScripts
             {
                 cupIn = false;
                 objetivoAnimator = null;
-                Debug.Log("Objeto con Animator salió del área de detección.");
             }
         }
     }

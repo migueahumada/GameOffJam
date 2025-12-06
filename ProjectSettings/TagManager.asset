@@ -11,6 +11,12 @@ TagManager:
   - Timeline
   - RythmJudge
   - Button
+  - Monita
+  - Bag
+  - Grain
+  - Cup
+  - Minigame
+  - Interactable
   layers:
   - Default
   - TransparentFX

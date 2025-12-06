@@ -6,14 +6,18 @@ public class AnimatorManager : MonoBehaviour
 {
     [Header("Animators")]
     [SerializeField] private string[] _tags;
-    private Animator[] animatorArray;
+    public Animator[] animatorArray;
 
     // variables
 
     private bool isPaused = false;
 
     [Header("Settings")]
-    [SerializeField] private bool inputUpEnabled = true;
+    private bool inputUpEnabled;
+
+    [Header("LEVEL")]
+    [SerializeField] private string levelName;
+    [SerializeField] private MinigameManager minigameManager;
 
 
 
@@ -24,15 +28,45 @@ public class AnimatorManager : MonoBehaviour
         MinigameManager.OnInputDown += HandleOnInputDown;
         MinigameManager.OnInputUp += HandleOnInputUp;
         RhythmJudge.OnMiss += HandleOnMiss;
+        RhythmJudge.OnPerfectInput += HandleOnPerfectInput;
+        FMODEventTimeline.OnTimelineEventTriggered += HandleTimelineEvent;
+        RhythmJudge.OnPerfectRelease += HandleOnPerfectRelease;
         //RhythmJudge.
     }
 
+    private void HandleOnPerfectRelease()
+    {
+        if (levelName == "FlavourFill")
+        {
+            SFXManager.instance.PlaySFX(6);
+        }
+    }
+
+    private void HandleTimelineEvent(TimelineEvent evt)
+    {
+        String evtName = evt.eventName.ToLower();
+        if (levelName == "GrindHour")
+        {
+            if (evtName.Contains("prep 4c start"))
+            {
+                for (int i = 0; i < animatorArray.Length; ++i)
+                {
+                    animatorArray[i].SetTrigger("Prep");
+                }
+            }
+        }
+    }
     private void HandleOnMiss()
     {
-        for (int i = 0; i < animatorArray.Length; ++i)
+        if (levelName == "FlavourFill")
         {
-            animatorArray[i].SetBool("Pressed", false);
-            animatorArray[i].SetTrigger("Miss");
+            Debug.Log("you missed");
+            SFXManager.instance.PlaySFX(7);
+            for (int i = 0; i < animatorArray.Length; ++i)
+            {
+                animatorArray[i].SetBool("Pressed", false);
+                animatorArray[i].SetTrigger("Miss");
+            }
         }
     }
 
@@ -40,18 +74,44 @@ public class AnimatorManager : MonoBehaviour
     {
         if (inputUpEnabled)
         {
-            for (int i = 0; i < animatorArray.Length; ++i)
+            if (levelName == "FlavourFill")
             {
-                animatorArray[i].SetBool("Pressed", false);
-            } 
+                
+                for (int i = 0; i < animatorArray.Length; ++i)
+                {
+                    animatorArray[i].SetBool("Pressed", false);
+                } 
+            }   
         }
     }
 
     private void HandleOnInputDown()
     {
-        for (int i = 0; i < animatorArray.Length; ++i)
+        if (levelName == "FlavourFill")
+        {            
+            for (int i = 0; i < animatorArray.Length; ++i)
+            {
+                animatorArray[i].SetBool("Pressed", true);
+            }
+        }
+        else if (levelName == "GrindHour")
         {
-            animatorArray[i].SetBool("Pressed", true);
+            for (int i = 0; i < animatorArray.Length; ++i)
+            {
+                animatorArray[i].SetTrigger("Input");
+            }
+        }
+    }
+
+    private void HandleOnPerfectInput()
+    {
+        SFXManager.instance.PlaySFX(5);
+        if (levelName == "GrindHour")
+        {
+            for (int i = 0; i < animatorArray.Length; ++i)
+            {
+                animatorArray[i].SetTrigger("Release");
+            }
         }
     }
 
@@ -60,7 +120,10 @@ public class AnimatorManager : MonoBehaviour
         MinigameManager.OnPause -= HandleOnPause;
         MinigameManager.OnInputDown -= HandleOnInputDown;
         MinigameManager.OnInputUp -= HandleOnInputUp;
-        RhythmJudge.OnMiss += HandleOnMiss;
+        RhythmJudge.OnMiss -= HandleOnMiss;
+        RhythmJudge.OnPerfectInput -= HandleOnPerfectInput;
+        FMODEventTimeline.OnTimelineEventTriggered -= HandleTimelineEvent;
+        RhythmJudge.OnPerfectRelease -= HandleOnPerfectRelease;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void HandleOnPause()
@@ -82,6 +145,7 @@ public class AnimatorManager : MonoBehaviour
     }
     void Start()
     {
+        inputUpEnabled = minigameManager.isUpEnabled;
         // En funcion de los tags que indique el usuario, encontrar los animators asociados.
         animatorArray = new Animator[_tags.Length];
         for (int i = 0; i < _tags.Length; ++i)

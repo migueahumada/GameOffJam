@@ -52,11 +52,19 @@ public class FMODEventTimeline : MonoBehaviour
     private void OnEnable()
     {
         MinigameManager.OnPause += HandleOnPause;
+        MinigameManager.OnSkip += HandleOnSkip;
     }
     private void OnDisable()
     {
         MinigameManager.OnPause -= HandleOnPause;
+        MinigameManager.OnSkip -= HandleOnSkip;
     }
+
+    private void HandleOnSkip()
+    {
+        _musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
     public void InitializeTimeline()
     {
         // AHORA ESTO ES PUBLICO y se llama después de asignar 'jsonFile'
@@ -103,8 +111,10 @@ public class FMODEventTimeline : MonoBehaviour
 
     public void HandleOnPause()
     {
-        _musicInstance.setPaused(pausedMenu);
         pausedMenu = !pausedMenu;
+        _musicInstance.setPaused(pausedMenu);
+        //if (pausedMenu) Time.timeScale = 0;
+        //else Time.timeScale = 1;
     }
 
     private void Update()

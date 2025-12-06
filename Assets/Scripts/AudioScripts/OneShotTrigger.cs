@@ -3,6 +3,7 @@ using UnityEngine;
 public class OneShotTrigger : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private int isPlayed = 0;
     void Start()
     {
         
@@ -21,6 +22,7 @@ public class OneShotTrigger : MonoBehaviour
 
     public void PlayOneAtOnce(int indexSFX)
     {
-        SFXManager.instance.PlaySFXOneAtTime(indexSFX);
+        if (isPlayed < 3) isPlayed ++;    
+        else SFXManager.instance.PlaySFXOneAtTime(indexSFX);
     }
 }

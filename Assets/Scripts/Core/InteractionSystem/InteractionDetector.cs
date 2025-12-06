@@ -28,7 +28,8 @@ public class InteractionDetector : MonoBehaviour
         if (other.TryGetComponent(out IInteractable interactable) && interactable.CanInteract())
         {
             interactableInRange = interactable;
-            interactionIcon.SetActive(true);
+            if (other.gameObject.tag == "Minigame") interactionIcon.SetActive(true);
+            else if (other.gameObject.tag == "Interactable") Debug.Log("es otra cosa");
         }
     }
 

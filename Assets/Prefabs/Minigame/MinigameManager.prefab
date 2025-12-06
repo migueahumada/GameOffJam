@@ -52,14 +52,14 @@ MonoBehaviour:
       Data2: 1233586088
       Data3: 653168807
       Data4: -2108111351
-    Path: event:/Music/BaristaMinigame
+    Path: event:/Music/FlavourFillMinigame
   tutorialEvent:
     Guid:
       Data1: 1499338590
       Data2: 1209190046
       Data3: 2058191265
       Data4: -931214423
-    Path: event:/Music/BaristaTutorialMinigame
+    Path: event:/Music/FlavourFillTutorial
   musicJSON: {fileID: 4900000, guid: 5a7b3f77d51c6d5409d6da87bf5e0c30, type: 3}
   tutorialJSON: {fileID: 4900000, guid: 4f232fea620303f498c44092307e6bda, type: 3}
   _backgroundWin: {fileID: 0}
@@ -71,8 +71,10 @@ MonoBehaviour:
       Data2: 1322525496
       Data3: -2120589162
       Data4: -1465212134
-    Path: event:/Music/BaristaCaratula
+    Path: event:/Music/FlavourFillCaratula
   skipButton: {fileID: 0}
   _dialogues:
   - {fileID: 0}
   - {fileID: 0}
+  _tutoCompletedDialogues: []
+  destroyTag: 

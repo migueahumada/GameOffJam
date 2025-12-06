@@ -102,6 +102,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-7644402684827036574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/FlavourFillTutorial
+  m_EditorClassIdentifier: 
+  Path: event:/Music/FlavourFillTutorial
+  Guid:
+    Data1: 1499338590
+    Data2: 1209190046
+    Data3: 2058191265
+    Data4: -931214423
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 56000
 --- !u!114 &-7321812935271031025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,10 +279,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639004483926001326
+  lastModified: 639006424164211665
   FileSizes:
   - Name: 
-    Value: 1694
+    Value: 1746
   Exists: 1
 --- !u!114 &-6641735991225597511
 MonoBehaviour:
@@ -439,6 +466,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5278205959766688766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/GrindHourMinigame
+  m_EditorClassIdentifier: 
+  Path: event:/Music/GrindHourMinigame
+  Guid:
+    Data1: -343291513
+    Data2: 1183871207
+    Data3: 2008190623
+    Data4: 1116934673
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 98769
 --- !u!114 &-5162816920190882167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +547,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4655231878111908793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/GrindHourTutorial
+  m_EditorClassIdentifier: 
+  Path: event:/Music/GrindHourTutorial
+  Guid:
+    Data1: -1907553083
+    Data2: 1193582671
+    Data3: -2060711532
+    Data4: 430226640
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 31384
 --- !u!114 &-3957259508867911618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,6 +681,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3057535973270834218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/FlavourFillMinigame
+  m_EditorClassIdentifier: 
+  Path: event:/Music/FlavourFillMinigame
+  Guid:
+    Data1: -1756239790
+    Data2: 1233586088
+    Data3: 653168807
+    Data4: -2108111351
+  Banks:
+  - {fileID: 3755572271588357070}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 96000
 --- !u!114 &-2016943510149704730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,33 +843,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-142776615175625555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/BaristaMinigame
-  m_EditorClassIdentifier: 
-  Path: event:/Music/BaristaMinigame
-  Guid:
-    Data1: -1756239790
-    Data2: 1233586088
-    Data3: 653168807
-    Data4: -2108111351
-  Banks:
-  - {fileID: 3755572271588357070}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 96000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,25 +862,26 @@ MonoBehaviour:
   - {fileID: 986364976288106600}
   - {fileID: 24328713644882935}
   - {fileID: -6913708561777949822}
-  - {fileID: -142776615175625555}
   - {fileID: 3197272092104653477}
   - {fileID: -3177415166795367599}
   - {fileID: 2575072285960518504}
-  - {fileID: 4214595066496135006}
   - {fileID: 622403726280847125}
   - {fileID: 611064576777412527}
   - {fileID: -5982876100091490300}
   - {fileID: -6840258958802674469}
   - {fileID: -1967530049040776182}
   - {fileID: -8509467740137130367}
-  - {fileID: 4078292858306031550}
-  - {fileID: 7906232609005371679}
+  - {fileID: -3057535973270834218}
+  - {fileID: -7644402684827036574}
+  - {fileID: -5278205959766688766}
+  - {fileID: -4655231878111908793}
+  - {fileID: 863535622549793318}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3755572271588357070}
   StringsBanks:
   - {fileID: -6696030385829459254}
-  cacheTime: 639004483926001326
+  cacheTime: 639006424164211665
   cacheVersion: 131633
 --- !u!114 &24328713644882935
 MonoBehaviour:
@@ -976,6 +1058,33 @@ MonoBehaviour:
     Data4: -1375541427
   Banks:
   - {fileID: -6253520445437254718}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &863535622549793318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/FlavourFillCaratula
+  m_EditorClassIdentifier: 
+  Path: event:/Music/FlavourFillCaratula
+  Guid:
+    Data1: -415963924
+    Data2: 1322525496
+    Data3: -2120589162
+    Data4: -1465212134
+  Banks:
+  - {fileID: 3755572271588357070}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1312,63 +1421,9 @@ MonoBehaviour:
   Path: Assets/Audio/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639004483925985854
+  lastModified: 639006424164190817
   FileSizes: []
   Exists: 1
---- !u!114 &4078292858306031550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/BaristaTutorialMinigame
-  m_EditorClassIdentifier: 
-  Path: event:/Music/BaristaTutorialMinigame
-  Guid:
-    Data1: 1499338590
-    Data2: 1209190046
-    Data3: 2058191265
-    Data4: -931214423
-  Banks:
-  - {fileID: 3755572271588357070}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 56000
---- !u!114 &4214595066496135006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/WaveOfClients
-  m_EditorClassIdentifier: 
-  Path: event:/Music/WaveOfClients
-  Guid:
-    Data1: -343291513
-    Data2: 1183871207
-    Data3: 2008190623
-    Data4: 1116934673
-  Banks:
-  - {fileID: 3755572271588357070}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 98769
 --- !u!114 &4602646489107421589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1491,30 +1546,3 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7906232609005371679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/BaristaCaratula
-  m_EditorClassIdentifier: 
-  Path: event:/Music/BaristaCaratula
-  Guid:
-    Data1: -415963924
-    Data2: 1322525496
-    Data3: -2120589162
-    Data4: -1465212134
-  Banks:
-  - {fileID: 3755572271588357070}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0

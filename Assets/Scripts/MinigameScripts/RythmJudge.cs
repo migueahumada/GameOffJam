@@ -24,9 +24,8 @@ namespace MinigameScripts
         public float InputOffsetMs = 0f; 
         public static event Action OnGameOverWin;
         public static event Action OnGameOverLoose;
+        public bool inputUpEnabled = false;
 
-        //private GameObject _gameOverWin;
-        //private GameObject _gameOverLoose;
 
         private List<RhythmPair> _rhythmPairs = new List<RhythmPair>();
         private int _currentPairIndex = 0;
@@ -34,9 +33,13 @@ namespace MinigameScripts
         private int _successfulPairs = 0;
         private int _totalPairs = 0;
 
+        // Events
+
         public static event Action OnMiss;
         public static event Action OnStartPour;
         public static event Action OnJudgeCreated;
+        public static event Action OnPerfectInput;
+        public static event Action OnPerfectRelease;
 
         private void Start()
         {
@@ -45,9 +48,6 @@ namespace MinigameScripts
             {
                 _timeline = FindFirstObjectByType<FMODEventTimeline>();
             }
-            
-            //_gameOverWin = GameObject.FindGameObjectWithTag("GameOverWin");
-            //_gameOverLoose = GameObject.FindGameObjectWithTag("GameOverLoose");
             // Initial parse
             ParseTimeline();
         }
@@ -67,10 +67,9 @@ namespace MinigameScripts
             // If the time has passed the Start Window and we aren't holding yet -> Missed Start
             if (!_isHoldingCorrectly && currentTimeMs > currentPair.StartTimeMs + (WindowMs / 2f))
             {
-                 Debug.Log($"❌ Missed Note {_currentPairIndex} (Too Slow!)");
+                 //Debug.Log($"❌ Missed Note {_currentPairIndex} (Too Slow!)");
                  // miss notification
                  OnMiss?.Invoke();
-                 SFXManager.instance.PlaySFX(7);
                  currentPair.Processed = true; // Mark as done so we don't double count
                  AdvanceToNextPair();
                  return;
@@ -79,10 +78,9 @@ namespace MinigameScripts
             // If we ARE holding, but passed the End Window -> Missed End
             if (_isHoldingCorrectly && currentTimeMs > currentPair.EndTimeMs + (WindowMs / 2f))
             {
-                 Debug.Log($"❌ Held too long! {_currentPairIndex}");
-                 // miss notification
+                 //Debug.Log($"❌ Held too long! {_currentPairIndex}");
+                 // miss notification (vale la pena diferenciar misses NOT DONE)
                  OnMiss?.Invoke();
-                 SFXManager.instance.PlaySFX(7);
                  currentPair.Processed = true;
                  AdvanceToNextPair();
                  return;
@@ -98,10 +96,13 @@ namespace MinigameScripts
                 if (Mathf.Abs(diff) <= (WindowMs / 2f))
                 {
                     OnStartPour?.Invoke();
-                    SFXManager.instance.PlaySFX(5);
                     _isHoldingCorrectly = true;
-                    
-                    Debug.Log($"✅ CAUGHT START! (Diff: {diff:F0}ms)");
+                    OnPerfectInput?.Invoke();
+                    if (!inputUpEnabled)
+                    {
+                        _successfulPairs++;
+                    } 
+                    //Debug.Log($"✅ CAUGHT START! (Diff: {diff:F0}ms)");
                 }
                 else
                 {
@@ -109,17 +110,15 @@ namespace MinigameScripts
                     if (diff < 0)
                     {
                         // Negative diff means we are EARLY (Time < StartTime)
-                        Debug.Log($"⚠️ Too Early! Wait! (Early by {Mathf.Abs(diff):F0}ms)");
-                        SFXManager.instance.PlaySFX(7);
-                        // miss notification
-                        OnMiss?.Invoke();
+                        //Debug.Log($"⚠️ Too Early! Wait! (Early by {Mathf.Abs(diff):F0}ms)");
+                        // miss notification?????????????????????? si se destruye ya no puede probar a darle otra vez. solo sonido?
+                        //OnMiss?.Invoke();
                         // DO NOT ADVANCE! Let the player try again or wait for the note.
                     }
                     else
                     {
                         // Positive diff means we are LATE (Time > StartTime)
-                        Debug.Log($"❌ Too Late! (Late by {diff:F0}ms)");
-                        SFXManager.instance.PlaySFX(7);
+                        //Debug.Log($"❌ Too Late! (Late by {diff:F0}ms)");
                         // miss notification
                         OnMiss?.Invoke();
                         // If we are late, we missed it. Skip to next.
@@ -137,14 +136,16 @@ namespace MinigameScripts
 
                     if (Mathf.Abs(diff) <= (WindowMs / 2f))
                     {
-                        SFXManager.instance.PlaySFX(6);
-                        _successfulPairs++;
-                        Debug.Log($"✨ PERFECT RELEASE! (Diff: {diff:F0}ms)");
+                        if (inputUpEnabled)
+                        {
+                            _successfulPairs++;
+                        }  
+                        OnPerfectRelease?.Invoke();
+                        //Debug.Log($"✨ PERFECT RELEASE! (Diff: {diff:F0}ms)");
                     }
                     else
                     {
-                        Debug.Log($"❌ Released Badly (Diff: {diff:F0}ms)");
-                        SFXManager.instance.PlaySFX(7);
+                        //Debug.Log($"❌ Released Badly (Diff: {diff:F0}ms)");
                         // miss notification
                         OnMiss?.Invoke();
                     }
@@ -197,16 +198,12 @@ namespace MinigameScripts
         {
             _currentPairIndex++;
             _isHoldingCorrectly = false;
-            
             if (_currentPairIndex >= _totalPairs)
             {
                 float score = _totalPairs > 0 ? ((float)_successfulPairs / _totalPairs) * 100f : 0;
-                Debug.Log($"🏁 GAME OVER! Score: {score:F1}%");
+                Debug.Log($"Score: {score}");
                 if (score >= 65) OnGameOverWin?.Invoke();
-                else OnGameOverLoose?.Invoke();
-                
-                //if (score >= 60) Invoke("showWin", 2);
-                //else Invoke("showLoose", 2);                
+                else OnGameOverLoose?.Invoke();         
             }
         }
     }

@@ -154,6 +154,15 @@ public class AudioManager : MonoBehaviour
         );
     }
 
+    public void PauseMusic()
+    {
+        currentMusicInstance.setPaused(true);
+    }
+    public void UnpauseMusic()
+    {
+        currentMusicInstance.setPaused(false);
+    }
+
     /// <summary>
     /// Corrutina para interpolar el valor del parámetro y aplicarlo a la instancia de música,
     /// utilizando tiempo no escalado para que funcione en pausa (Time.timeScale = 0).

@@ -44,8 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b252afb65dde649b75fbd5f17acba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armAnimator: {fileID: 0}
-  _machineAnimator: {fileID: 0}
   _timeline: {fileID: 0}
-  WindowMs: 400
+  WindowMs: 300
   InputOffsetMs: 0

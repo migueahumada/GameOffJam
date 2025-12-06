@@ -21,10 +21,10 @@ public class SetttingsManager : MonoBehaviour
         
         SFXManager.instance.sfxBus.setVolume(SFXsavedValue);
         SFXManager.instance.musicBus.setVolume(MusicsavedValue);
+
+        Music.value = PlayerPrefs.GetFloat(MusicSliderKey, defaultValue);
+        SFX.value = PlayerPrefs.GetFloat(SFXSliderKey, defaultValue);
     }
-
-
-   
 
     public void ShowSettings()
     {
