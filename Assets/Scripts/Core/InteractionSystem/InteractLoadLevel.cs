@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class InteractLoadLevel : MonoBehaviour, IInteractable
 {
-    [SerializeField] private string sceneName;
+    [SerializeField] private int sceneIndex;
     public bool CanInteract()
     {
         return true;
@@ -11,6 +11,6 @@ public class InteractLoadLevel : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneIndex);
     }
 }

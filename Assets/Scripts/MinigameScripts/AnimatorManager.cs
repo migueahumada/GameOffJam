@@ -1,23 +1,32 @@
 using System;
+using FMODUnity;
 using MinigameScripts;
 using UnityEngine;
 
 public class AnimatorManager : MonoBehaviour
 {
-    [Header("Animators")]
+    [Header("ANIMATORS")]
     [SerializeField] private string[] _tags;
-    public Animator[] animatorArray;
+    private Animator[] animatorArray;
 
     // variables
 
     private bool isPaused = false;
 
-    [Header("Settings")]
+    [Header("SETTINGS")]
     private bool inputUpEnabled;
 
     [Header("LEVEL")]
     [SerializeField] private string levelName;
     [SerializeField] private MinigameManager minigameManager;
+
+    [Header("INPUT SOUNDS")]
+    [SerializeField] private EventReference inputDown;
+    [SerializeField] private EventReference inputUp;
+    [SerializeField] private EventReference perfectRelease;
+    [SerializeField] private EventReference perfectCatch;
+    [SerializeField] private EventReference missInput;
+    [SerializeField] private EventReference prepEvent;
 
 
 
@@ -38,7 +47,8 @@ public class AnimatorManager : MonoBehaviour
     {
         if (levelName == "FlavourFill")
         {
-            SFXManager.instance.PlaySFX(6);
+            RuntimeManager.PlayOneShot(perfectRelease);
+            //SFXManager.instance.PlaySFX(6);
         }
     }
 
@@ -51,6 +61,7 @@ public class AnimatorManager : MonoBehaviour
             {
                 for (int i = 0; i < animatorArray.Length; ++i)
                 {
+                    RuntimeManager.PlayOneShot(prepEvent);
                     animatorArray[i].SetTrigger("Prep");
                 }
             }
@@ -60,11 +71,18 @@ public class AnimatorManager : MonoBehaviour
     {
         if (levelName == "FlavourFill")
         {
-            Debug.Log("you missed");
-            SFXManager.instance.PlaySFX(7);
+            RuntimeManager.PlayOneShot(missInput);
             for (int i = 0; i < animatorArray.Length; ++i)
             {
                 animatorArray[i].SetBool("Pressed", false);
+                animatorArray[i].SetTrigger("Miss");
+            }
+        }
+        else if (levelName == "GrindHour")
+        {
+            RuntimeManager.PlayOneShot(missInput);
+            for (int i = 0; i < animatorArray.Length; ++i)
+            {
                 animatorArray[i].SetTrigger("Miss");
             }
         }
@@ -76,7 +94,7 @@ public class AnimatorManager : MonoBehaviour
         {
             if (levelName == "FlavourFill")
             {
-                
+                //RuntimeManager.PlayOneShot(inputUp); MEJOR CONTROLAR DESDE ANIM PARA EVITAR SPAM
                 for (int i = 0; i < animatorArray.Length; ++i)
                 {
                     animatorArray[i].SetBool("Pressed", false);
@@ -88,7 +106,9 @@ public class AnimatorManager : MonoBehaviour
     private void HandleOnInputDown()
     {
         if (levelName == "FlavourFill")
-        {            
+        {   
+            //SFXManager.instance.PlaySFX(5);
+            //RuntimeManager.PlayOneShot(inputUp);         
             for (int i = 0; i < animatorArray.Length; ++i)
             {
                 animatorArray[i].SetBool("Pressed", true);
@@ -105,9 +125,10 @@ public class AnimatorManager : MonoBehaviour
 
     private void HandleOnPerfectInput()
     {
-        SFXManager.instance.PlaySFX(5);
         if (levelName == "GrindHour")
         {
+            //SFXManager.instance.PlaySFX(5);
+            RuntimeManager.PlayOneShot(perfectCatch);
             for (int i = 0; i < animatorArray.Length; ++i)
             {
                 animatorArray[i].SetTrigger("Release");

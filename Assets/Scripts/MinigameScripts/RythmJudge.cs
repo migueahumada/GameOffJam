@@ -109,16 +109,21 @@ namespace MinigameScripts
                     // --- CRITICAL FIX IS HERE ---
                     if (diff < 0)
                     {
+                        if (Mathf.Abs(diff) < 600.00f)
+                        {
+                            OnMiss?.Invoke();
+                            Debug.Log($"⚠️ Too Early! Wait! (Early by {Mathf.Abs(diff):F0}ms)");
+                            AdvanceToNextPair();
+                        }
+                        Debug.Log(Mathf.Abs(diff));
                         // Negative diff means we are EARLY (Time < StartTime)
-                        //Debug.Log($"⚠️ Too Early! Wait! (Early by {Mathf.Abs(diff):F0}ms)");
                         // miss notification?????????????????????? si se destruye ya no puede probar a darle otra vez. solo sonido?
-                        //OnMiss?.Invoke();
                         // DO NOT ADVANCE! Let the player try again or wait for the note.
                     }
                     else
                     {
                         // Positive diff means we are LATE (Time > StartTime)
-                        //Debug.Log($"❌ Too Late! (Late by {diff:F0}ms)");
+                        Debug.Log($"❌ Too Late! (Late by {diff:F0}ms)");
                         // miss notification
                         OnMiss?.Invoke();
                         // If we are late, we missed it. Skip to next.
@@ -145,9 +150,12 @@ namespace MinigameScripts
                     }
                     else
                     {
-                        //Debug.Log($"❌ Released Badly (Diff: {diff:F0}ms)");
-                        // miss notification
-                        OnMiss?.Invoke();
+                        if (inputUpEnabled)
+                        {
+                            // miss notification
+                            Debug.Log($"❌ Released Badly (Diff: {diff:F0}ms)");
+                            OnMiss?.Invoke();    
+                        }
                     }
                     
                     // Whether good or bad release, this note is done.

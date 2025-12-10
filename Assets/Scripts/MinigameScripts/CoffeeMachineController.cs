@@ -1,4 +1,5 @@
 using System;
+using FMODUnity;
 using UnityEngine;
 
 namespace MinigameScripts
@@ -7,11 +8,17 @@ namespace MinigameScripts
     {
         [SerializeField] private GameObject[] _cups;
 
+        [Header("PREP SOUNDS")]
+        [SerializeField] private EventReference prepStart;
+        [SerializeField] private EventReference prepFinish;
+
          private FMODEventTimeline _fmodTimeline;
         //private Boolean _isPouring;
         //animation triggers
         public static event Action OnPrepStart;
         public static event Action OnPrepFinish;
+        
+
 
         private static readonly Int32 MachinePress = Animator.StringToHash("MachinePress");
         private static readonly Int32 AnimSpeed = Animator.StringToHash("Speed");
@@ -50,7 +57,7 @@ namespace MinigameScripts
             {
                 Debug.Log("PREP FINISH");
                 OnPrepStart?.Invoke();
-                SFXManager.instance.PlaySFX(9);
+                RuntimeManager.PlayOneShot(prepFinish);
             }
 
 
@@ -73,7 +80,7 @@ namespace MinigameScripts
 
         private void HandleCupEntry(String eventName)
         {
-            SFXManager.instance.PlaySFX(8);
+            RuntimeManager.PlayOneShot(prepStart);
             if (eventName.Contains("2c norm")) 
             {    
                 GameObject sCupInstance = Instantiate(_cups[1]); 

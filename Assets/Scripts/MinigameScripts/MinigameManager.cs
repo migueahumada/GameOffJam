@@ -34,6 +34,7 @@ public class MinigameManager : MonoBehaviour
     [SerializeField] private GameObject[] _dialogues;
     [SerializeField] private GameObject[] _tutoCompletedDialogues;
 
+    [SerializeField] private GameObject settingsObject;
     public bool isUpEnabled = false;
     private bool isPaused = false;
 
@@ -47,8 +48,6 @@ public class MinigameManager : MonoBehaviour
     private GameObject minigameObject;
     private GameObject tutorialObject;
     [SerializeField] private string destroyTag = null;
-
-    
 
     public static event Action OnPause;
     public static event Action OnInputDown;
@@ -96,7 +95,7 @@ public class MinigameManager : MonoBehaviour
     {
         Debug.Log("Game over loose desde minigame manager");
         victory = false;
-        NextStage(false);
+        NextStage(true);
     }
 
     public void NextStage(bool proceed)
@@ -259,7 +258,7 @@ public class MinigameManager : MonoBehaviour
         // INPUTS OF THE PLAYER 
         if (isIntroductionActive)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && dialogIndex < currentDialogue.Length)
+            if (Input.GetKeyUp(KeyCode.Space) && dialogIndex < currentDialogue.Length)
             {
                 AdvanceDialogue();
             }
@@ -278,12 +277,18 @@ public class MinigameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            if (stageIndex<3) skipButton.SetActive(isPaused);
-            OnPause?.Invoke();
-            isPaused = !isPaused;
-            ShowMenu();
+            if (settingsObject.activeSelf)
+            {
+                settingsObject.SetActive(false);
+            }
+            else
+            {
+                if (stageIndex<3) skipButton.SetActive(isPaused);
+                OnPause?.Invoke();
+                isPaused = !isPaused;
+                ShowMenu();    
+            }
         }
-
     }
 
     private void ShowMenu()

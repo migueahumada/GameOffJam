@@ -478,138 +478,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77094082}
   m_CullTransparentMesh: 1
---- !u!1 &100333555
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 100333556}
-  - component: {fileID: 100333559}
-  - component: {fileID: 100333558}
-  - component: {fileID: 100333557}
-  m_Layer: 0
-  m_Name: Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &100333556
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100333555}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 808828340}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 82.95189, y: 69.107544}
-  m_SizeDelta: {x: 97.3937, y: 69.2084}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &100333557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100333555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 100333558}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 766859721}
-        m_TargetAssemblyTypeName: MinigameManager, Assembly-CSharp
-        m_MethodName: NextStage
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &100333558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100333555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &100333559
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100333555}
-  m_CullTransparentMesh: 1
 --- !u!1 &174899683
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +659,20 @@ MonoBehaviour:
   - {fileID: 39827930090432136, guid: b0555affd84e6e94d9e3391fb6da7de4, type: 3}
   - {fileID: 6793266332299781117, guid: 1585df786604fb049b75a1e29d7b1058, type: 3}
   - {fileID: 1262753474958920022, guid: 864df5ea382f72c449db37cd693e5cb0, type: 3}
+  prepStart:
+    Guid:
+      Data1: 1370490327
+      Data2: 1314978700
+      Data3: 1770361233
+      Data4: -1375541427
+    Path: event:/Barista/BaristaPrepIn
+  prepFinish:
+    Guid:
+      Data1: 1068653792
+      Data2: 1211006383
+      Data3: 229993864
+      Data4: 2134875924
+    Path: event:/Barista/BaristaPrepOut
 --- !u!4 &228926384
 Transform:
   m_ObjectHideFlags: 0
@@ -1873,17 +1755,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6127765069530820668, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6504024409932727693, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 100333556}
+    - {fileID: 7034458529963950571, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
+    - {fileID: 4191809358170807159, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
+    - {fileID: 345933890628510529, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
---- !u!224 &808828340 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6504024409932727693, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
-  m_PrefabInstance: {fileID: 808828336}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &890624390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,36 +1928,6 @@ MonoBehaviour:
       Data3: -1711477846
       Data4: -817919045
     Path: event:/SFX/AcceptDialogue
-  - Guid:
-      Data1: -1288752565
-      Data2: 1161158460
-      Data3: 1691714746
-      Data4: -457422816
-    Path: event:/Barista/BaristaInputDown
-  - Guid:
-      Data1: 1984059399
-      Data2: 1323675551
-      Data3: -915082329
-      Data4: 900430492
-    Path: event:/Barista/BaristaPerfect
-  - Guid:
-      Data1: -890669734
-      Data2: 1105826501
-      Data3: 290775430
-      Data4: -85762274
-    Path: event:/Barista/BaristaMiss
-  - Guid:
-      Data1: 1370490327
-      Data2: 1314978700
-      Data3: 1770361233
-      Data4: -1375541427
-    Path: event:/Barista/BaristaPrepIn
-  - Guid:
-      Data1: 1068653792
-      Data2: 1211006383
-      Data3: 229993864
-      Data4: 2134875924
-    Path: event:/Barista/BaristaPrepOut
 --- !u!4 &922226006
 Transform:
   m_ObjectHideFlags: 0
@@ -3363,6 +3210,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5992622822282618036, guid: bd496d9e36df05c409bcf0c82bc7b7e6, type: 3}
   m_PrefabInstance: {fileID: 3635877985344324328}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1721896535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721896530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6df0f8b5f866474fbaf7ed99c2b611d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventRef:
+  - Guid:
+      Data1: -1288752565
+      Data2: 1161158460
+      Data3: 1691714746
+      Data4: -457422816
+    Path: event:/Barista/BaristaInputDown
+  - Guid:
+      Data1: 1004248911
+      Data2: 1099991235
+      Data3: 942570134
+      Data4: -1950016294
+    Path: event:/Barista/BaristaInputUp
 --- !u!1 &1766647834 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3054333650319058171, guid: cd7830b730aad334db75f00c2b70bdf0, type: 3}
@@ -3533,6 +3405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6df0f8b5f866474fbaf7ed99c2b611d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventRef: []
 --- !u!4 &1878218864
 Transform:
   m_ObjectHideFlags: 0
@@ -4389,6 +4262,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 232271490}
     - target: {fileID: 4603712763574171414, guid: ca34c2ad67998b647aa924aaf39ca3b5, type: 3}
+      propertyPath: settingsObject
+      value: 
+      objectReference: {fileID: 477523788}
+    - target: {fileID: 4603712763574171414, guid: ca34c2ad67998b647aa924aaf39ca3b5, type: 3}
       propertyPath: _backgroundLoose
       value: 
       objectReference: {fileID: 1766647834}
@@ -4520,6 +4397,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6368584758456073742, guid: bd496d9e36df05c409bcf0c82bc7b7e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1721896531}
+    - targetCorrespondingSourceObject: {fileID: 6368584758456073742, guid: bd496d9e36df05c409bcf0c82bc7b7e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1721896535}
   m_SourcePrefab: {fileID: 100100000, guid: bd496d9e36df05c409bcf0c82bc7b7e6, type: 3}
 --- !u!1001 &5536535235886402173
 PrefabInstance:
@@ -4578,9 +4458,37 @@ PrefabInstance:
       value: FlavourFill
       objectReference: {fileID: 0}
     - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: inputUp.Path
+      value: event:/Barista/BaristaInputUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: inputDown.Path
+      value: event:/Barista/BaristaInputDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: missInput.Path
+      value: event:/Barista/BaristaMiss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
       propertyPath: minigameManager
       value: 
       objectReference: {fileID: 766859721}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: inputUp.Guid.Data1
+      value: 1004248911
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: inputUp.Guid.Data2
+      value: 1099991235
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: inputUp.Guid.Data3
+      value: 942570134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: inputUp.Guid.Data4
+      value: -1950016294
+      objectReference: {fileID: 0}
     - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
       propertyPath: '_tags.Array.data[0]'
       value: Arm
@@ -4588,6 +4496,58 @@ PrefabInstance:
     - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
       propertyPath: '_tags.Array.data[1]'
       value: Machine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: perfectRelease.Path
+      value: event:/Barista/BaristaPerfect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: inputDown.Guid.Data1
+      value: -1288752565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: inputDown.Guid.Data2
+      value: 1161158460
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: inputDown.Guid.Data3
+      value: 1691714746
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: inputDown.Guid.Data4
+      value: -457422816
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: missInput.Guid.Data1
+      value: -890669734
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: missInput.Guid.Data2
+      value: 1105826501
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: missInput.Guid.Data3
+      value: 290775430
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: missInput.Guid.Data4
+      value: -85762274
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: perfectRelease.Guid.Data1
+      value: 1984059399
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: perfectRelease.Guid.Data2
+      value: 1323675551
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: perfectRelease.Guid.Data3
+      value: -915082329
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268349913372000398, guid: 9d0b8f17b4e487f40afa003b4b392d8b, type: 3}
+      propertyPath: perfectRelease.Guid.Data4
+      value: 900430492
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
