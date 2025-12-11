@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_COUNTERS
+  m_Name: MI_COUNTERS
   m_Shader: {fileID: 4800000, guid: 8e996df2ad1481247adb9cca9d845b6f, type: 3}
-  m_Parent: {fileID: 2100000, guid: b1beb755fa36ccc449b95cf9ad4f7983, type: 2}
+  m_Parent: {fileID: 2100000, guid: 0e46ccce230bc774bae9e734950a802a, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -18,33 +18,18 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BaseMap:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: e97880e497e3ed047bd19246b1cd2c9d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _Smoothness: 0
+    m_Floats: []
     m_Colors:
-    - _Color: {r: 0.82641506, g: 0.82641506, b: 0.82641506, a: 1}
+    - _Color: {r: 0.6377357, g: 0.6377357, b: 0.6377357, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &3451804690442203269
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 10
