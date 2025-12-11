@@ -4,7 +4,9 @@ using UnityEngine.InputSystem;
 public class InteractionDetector : MonoBehaviour
 {
     private IInteractable interactableInRange = null; // Closest Interactable
-    public GameObject interactionIcon;
+    [Header("ICONS")]
+    [SerializeField] private GameObject minigameIcon;
+    [SerializeField] private GameObject interactionIcon;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,8 +30,8 @@ public class InteractionDetector : MonoBehaviour
         if (other.TryGetComponent(out IInteractable interactable) && interactable.CanInteract())
         {
             interactableInRange = interactable;
-            if (other.gameObject.tag == "Minigame") interactionIcon.SetActive(true);
-            else if (other.gameObject.tag == "Interactable") Debug.Log("es otra cosa");
+            if (other.gameObject.tag == "Minigame") minigameIcon.SetActive(true);
+            else if (other.gameObject.tag == "Interactable") interactionIcon.SetActive(true);
         }
     }
 
@@ -39,6 +41,7 @@ public class InteractionDetector : MonoBehaviour
         {
             interactableInRange = null;
             interactionIcon.SetActive(false);
+            minigameIcon.SetActive(false);
         }   
     }
 }

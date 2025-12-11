@@ -24,7 +24,9 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _Culling: 2
+    - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.96981126, g: 0.499033, b: 0, a: 1}
   m_BuildTextureStacks: []

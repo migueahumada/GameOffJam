@@ -116,8 +116,8 @@ public class MinigameManager : MonoBehaviour
                 ShowDialogue(_tutoCompletedDialogues);
                 break;
             case 3: 
-                Invoke("DestroyLevel",1);
-                Invoke("StartMinigame", 2);
+                DestroyLevel();
+                StartMinigame();
                 break;
             case 4:
                 Invoke("DestroyLevel",2);
@@ -284,6 +284,10 @@ public class MinigameManager : MonoBehaviour
             else
             {
                 if (stageIndex<3) skipButton.SetActive(isPaused);
+                else
+                {
+                    skipButton.SetActive(false);
+                }
                 OnPause?.Invoke();
                 isPaused = !isPaused;
                 ShowMenu();    

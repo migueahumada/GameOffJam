@@ -33,6 +33,7 @@ namespace MinigameScripts
         private int _successfulPairs = 0;
         private int _totalPairs = 0;
 
+
         // Events
 
         public static event Action OnMiss;
@@ -61,6 +62,7 @@ namespace MinigameScripts
             if (_rhythmPairs.Count == 0 || _currentPairIndex >= _rhythmPairs.Count) return;
 
             float currentTimeMs = (_timeline.CurrentTimeSeconds * 1000f) + InputOffsetMs;
+
             var currentPair = _rhythmPairs[_currentPairIndex];
 
             // 1. TIMEOUT CHECK (Missed by doing nothing)

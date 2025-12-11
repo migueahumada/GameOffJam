@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4762d8e74d2e15945be07083b6de0b38, type: 2}
+  - {fileID: 2100000, guid: 6381ae8836aff0f429249f16579aa11a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -177,7 +177,7 @@ PrefabInstance:
     - target: {fileID: -5538372421413854238, guid: db702a0a3b509124fb1c93e6d7a76acc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 442c81e630c092641ae91103adb0cbc8, type: 2}
+      objectReference: {fileID: 2100000, guid: e1ebfdb76c887914eb6e241c878b5c83, type: 2}
     - target: {fileID: 919132149155446097, guid: db702a0a3b509124fb1c93e6d7a76acc, type: 3}
       propertyPath: m_Name
       value: XS Cup

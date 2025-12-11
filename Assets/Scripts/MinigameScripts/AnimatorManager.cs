@@ -13,8 +13,8 @@ public class AnimatorManager : MonoBehaviour
 
     private bool isPaused = false;
 
-    [Header("SETTINGS")]
     private bool inputUpEnabled;
+    private bool isGameOver = false;
 
     [Header("LEVEL")]
     [SerializeField] private string levelName;
@@ -40,7 +40,19 @@ public class AnimatorManager : MonoBehaviour
         RhythmJudge.OnPerfectInput += HandleOnPerfectInput;
         FMODEventTimeline.OnTimelineEventTriggered += HandleTimelineEvent;
         RhythmJudge.OnPerfectRelease += HandleOnPerfectRelease;
+        RhythmJudge.OnGameOverWin += HandleOnGameOverWin;
+        RhythmJudge.OnGameOverLoose += HandleOnGameOverLoose;
         //RhythmJudge.
+    }
+
+    private void HandleOnGameOverWin()
+    {
+        isGameOver = true;
+    }
+
+    private void HandleOnGameOverLoose()
+    {
+        isGameOver = true;
     }
 
     private void HandleOnPerfectRelease()
@@ -90,7 +102,7 @@ public class AnimatorManager : MonoBehaviour
 
     private void HandleOnInputUp()
     {
-        if (inputUpEnabled)
+        if (inputUpEnabled && !isGameOver && !isPaused)
         {
             if (levelName == "FlavourFill")
             {
@@ -105,20 +117,23 @@ public class AnimatorManager : MonoBehaviour
 
     private void HandleOnInputDown()
     {
-        if (levelName == "FlavourFill")
-        {   
-            //SFXManager.instance.PlaySFX(5);
-            //RuntimeManager.PlayOneShot(inputUp);         
-            for (int i = 0; i < animatorArray.Length; ++i)
-            {
-                animatorArray[i].SetBool("Pressed", true);
+        if (!isGameOver  && !isPaused)
+        {            
+            if (levelName == "FlavourFill")
+            {   
+                //SFXManager.instance.PlaySFX(5);
+                //RuntimeManager.PlayOneShot(inputUp);         
+                for (int i = 0; i < animatorArray.Length; ++i)
+                {
+                    animatorArray[i].SetBool("Pressed", true);
+                }
             }
-        }
-        else if (levelName == "GrindHour")
-        {
-            for (int i = 0; i < animatorArray.Length; ++i)
+            else if (levelName == "GrindHour")
             {
-                animatorArray[i].SetTrigger("Input");
+                for (int i = 0; i < animatorArray.Length; ++i)
+                {
+                    animatorArray[i].SetTrigger("Input");
+                }
             }
         }
     }
@@ -145,6 +160,8 @@ public class AnimatorManager : MonoBehaviour
         RhythmJudge.OnPerfectInput -= HandleOnPerfectInput;
         FMODEventTimeline.OnTimelineEventTriggered -= HandleTimelineEvent;
         RhythmJudge.OnPerfectRelease -= HandleOnPerfectRelease;
+        RhythmJudge.OnGameOverWin -= HandleOnGameOverWin;
+        RhythmJudge.OnGameOverLoose -= HandleOnGameOverLoose;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void HandleOnPause()

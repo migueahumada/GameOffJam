@@ -279,7 +279,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639009818231556606
+  lastModified: 639010496480776411
   FileSizes:
   - Name: 
     Value: 2026
@@ -882,7 +882,7 @@ MonoBehaviour:
   - {fileID: 3755572271588357070}
   StringsBanks:
   - {fileID: -6696030385829459254}
-  cacheTime: 639009818231556606
+  cacheTime: 639010496480776411
   cacheVersion: 131633
 --- !u!114 &24328713644882935
 MonoBehaviour:
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639009818231477989
+  lastModified: 639010496480745120
   FileSizes: []
   Exists: 1
 --- !u!114 &4602646489107421589
